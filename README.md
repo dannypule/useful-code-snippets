@@ -64,9 +64,12 @@ copy(JSON.stringify(res.data))
 $('html, body').animate({scrollTop: $("#foo").offset().top - 100}, 300);
 ```
 
-##### Launching bootstrap modals
+##### Opening or closing bootstrap modals
 ```
-data-toggle="modal" data-target="#fullDetailsModal"
+or
+```
+$('#fullDetailsModal').modal('open');
+$('#fullDetailsModal').modal('close');
 ```
 
 <h3 align="center">CSS</h3>
