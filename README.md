@@ -66,8 +66,6 @@ $('html, body').animate({scrollTop: $("#foo").offset().top - 100}, 300);
 
 ##### Opening or closing bootstrap modals
 ```
-or
-```
 $('#fullDetailsModal').modal('open');
 $('#fullDetailsModal').modal('close');
 ```
