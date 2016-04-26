@@ -114,6 +114,20 @@ background: linear-gradient(45deg, #E4C654 0%, #E4C654 49%,#D6BC5B 50%);
 </style>
 ```
 
+##### Center image vertically and horizontally
+```
+img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 80%;
+}
+```
+
 
 
 
