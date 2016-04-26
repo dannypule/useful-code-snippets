@@ -15,15 +15,6 @@ function getQueryParam(param) {
 };
 ```
 
-##### Random number between max and min
-
-```
-var max = 40;
-var min = 20;
-var randonNumber = Math.ceil(Math.random() * (max - min) + min);
-document.writeln(randonNumber);
-```
-
 ##### Displays calling function as string
 ```
 console.log("caller is " + arguments.callee.caller);
@@ -48,4 +39,13 @@ console.log(str);
 ```
 // where res.data is the JSON object
 copy(JSON.stringify(res.data))
+```
+
+##### Random number between max and min
+
+```
+var max = 40;
+var min = 20;
+var randonNumber = Math.ceil(Math.random() * (max - min) + min);
+document.writeln(randonNumber);
 ```
