@@ -52,6 +52,7 @@ console.log(str);
 copy(JSON.stringify(res.data))
 ```
 
+<br />
 <h3 align="center">jQuery</h3>
 
 ##### Attribute selector for jquery
@@ -70,6 +71,7 @@ $('#fullDetailsModal').modal('open');
 $('#fullDetailsModal').modal('close');
 ```
 
+<br />
 <h3 align="center">CSS</h3>
 
 ##### Element highlighting turned off
