@@ -1,8 +1,8 @@
-# Useful snippets of code.
-Contributor(s): Danny Pule
+<h1 align="center">Useful snippets of code</h1>
+<p align="center">Contributor(s): Danny Pule</p>
 
-
-## Vanilla Javascript
+<br />
+<h3 align="center">Vanilla Javascript</h3>
 
 ##### Get value of parameter from url
 ```
@@ -52,7 +52,7 @@ console.log(str);
 copy(JSON.stringify(res.data))
 ```
 
-## jQuery
+<h3 align="center">jQuery</h3>
 
 ##### Attribute selector for jquery
 ```
@@ -69,7 +69,7 @@ $('html, body').animate({scrollTop: $("#foo").offset().top - 100}, 300);
 data-toggle="modal" data-target="#fullDetailsModal"
 ```
 
-## CSS
+<h3 align="center">CSS</h3>
 
 ##### Element highlighting turned off
 ```
