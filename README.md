@@ -4,6 +4,19 @@ Contributor(s): Danny Pule
 
 ## Vanilla Javascript
 
+##### Get value of parameter from url
+```
+function getQueryParam(param) {
+    var found;
+    window.location.search.substr(1).split("&").forEach(function(item) {
+        if (param ==  item.split("=")[0]) {
+            found = item.split("=")[1];
+        }
+    });
+    return found;
+};
+```
+
 ##### Random number between max and min
 
 ```
@@ -33,6 +46,29 @@ var str = " thi s str ing has sp aces".replace(/ /g,'');
 console.log(str);
 ```
 
+##### How to copy JSON data from the console
+```
+// where res.data is the JSON object
+copy(JSON.stringify(res.data))
+```
+
+## jQuery
+
+##### Attribute selector for jquery
+```
+[data-id="appStore"]  // attribute selector for jquery
+```
+
+##### Scroll to position
+```
+$('html, body').animate({scrollTop: $("#foo").offset().top - 100}, 300);
+```
+
+##### Launching bootstrap modals
+```
+data-toggle="modal" data-target="#fullDetailsModal"
+```
+
 ## CSS
 
 ##### Element highlighting turned off
@@ -49,37 +85,18 @@ cursor: -webkit-grabbing;
 cursor: -moz-grabbing;
 ```
 
-# TODO: FORMAT EVERYTHING BELOW THIS LINE
-
-[data-id="appStore"]  // attribute selector for jquery
-..
-
+##### Preserve line breaks in html
+```
 white-space: pre-wrap; (preserves line breaks in html)
-..
+```
 
-$('html, body').animate({scrollTop: $("#foo").offset().top - 100}, 300);
-
-..
-
-       function getQueryParam(param) {
-	    var found;
-	    window.location.search.substr(1).split("&").forEach(function(item) {
-	        if (param ==  item.split("=")[0]) {
-	            found = item.split("=")[1];
-	        }
-	    });
-	    return found;
-	};
-
-..
-
+##### Background gradients
+```
 background: linear-gradient(45deg, #E4C654 0%, #E4C654 49%,#D6BC5B 50%);
-..
+```
 
-// for launching bootstrap modals
-data-toggle="modal" data-target="#fullDetailsModal"
-..
-
+##### Load images based on screen width - optimize images for mobile or desktop
+```
 <style>
     /* for mobile screens widths up to 479px --- based on Bootstraps breakpoints */ 
     .hero-image { 
@@ -92,13 +109,8 @@ data-toggle="modal" data-target="#fullDetailsModal"
         .hero-image { background: url("https://d1f9hf6w7e7i7b.cloudfront.net/www/views/img/plan-pages/first-5k-run-lg.jpg"); }
     }
 </style>
+```
 
-
-..
-How to copy JSON data from the console
-
-// where res.data is the JSON object
-copy(JSON.stringify(res.data))
 
 
 
