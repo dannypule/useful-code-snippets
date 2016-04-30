@@ -1,5 +1,6 @@
 # General
 
+## Chrome Dev Tools
 Reminder: Chrome DevTools can list the event handlers registered on any element. 
 Inspect element > expand the 'Event Listeners' panel (to the right of your DOM tree). 
 BOOM. All there.
