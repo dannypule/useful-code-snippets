@@ -9,3 +9,15 @@ BOOM. All there.
 
 #### `git co` as a shortcut for `git checkout`
 `git config --global alias.co checkout`
+
+#### Getting unstuck from vim while merging git branches
+
+press "i"
+
+write your merge message
+
+press "esc"
+
+write ":wq"
+
+then press enter
