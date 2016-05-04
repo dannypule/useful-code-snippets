@@ -27,3 +27,8 @@ then press enter
 
 #### Mouse settings on Linux
 `xinput set-prop 8 272 2`
+
+<br>
+#### Clearfix
+
+http://www.webtoolkit.info/css-clearfix.html#.VyofoFYrL0o
