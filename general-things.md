@@ -10,6 +10,7 @@ BOOM. All there.
 #### `git co` as a shortcut for `git checkout`
 `git config --global alias.co checkout`
 
+<br>
 #### Getting unstuck from vim while merging git branches
 
 press "i"
@@ -21,3 +22,8 @@ press "esc"
 write ":wq"
 
 then press enter
+
+<br>
+
+#### Mouse settings on Linux
+`xinput set-prop 8 272 2`
