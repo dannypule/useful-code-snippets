@@ -29,6 +29,6 @@ then press enter
 `xinput set-prop 8 272 2`
 
 <br>
-#### Clearfix
+#### CSS Clearfix
 
 http://www.webtoolkit.info/css-clearfix.html#.VyofoFYrL0o
