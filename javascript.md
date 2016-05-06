@@ -94,3 +94,23 @@ function validateUrl(value){
 	return re_weburl.exec(value);
 }
 ```
+
+<br>
+
+##### Close drop down menu when other element is clicked
+
+```
+$(document).mouseup(function (e) {
+    var $container = $(".myAccount");
+    var $accountMenu = $('.subMenu');
+
+    if (!$container.is(e.target) // if the target of the click isn't the container...
+        && $container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        $accountMenu.hide();
+        $container.removeClass('goesUp');
+    }
+});
+```
+
+
