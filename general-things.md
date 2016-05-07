@@ -10,6 +10,7 @@ BOOM. All there.
 
 ##### `git co` as a shortcut for `git checkout`
 `git config --global alias.co checkout`
+
 <br>
 
 ##### Change remote git repo
