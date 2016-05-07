@@ -7,11 +7,15 @@ BOOM. All there.
 [via Twitter] https://plus.google.com/+AddyOsmani/posts/9WvgE2K2QTF
 
 
-#### `git co` as a shortcut for `git checkout`
+##### `git co` as a shortcut for `git checkout`
 `git config --global alias.co checkout`
+<br>
+
+##### remove git repo
+`rm -rf .git`
 
 <br>
-#### Getting unstuck from vim while merging git branches
+##### Getting unstuck from vim while merging git branches
 
 press "i"
 
@@ -25,10 +29,10 @@ then press enter
 
 <br>
 
-#### Mouse settings on Linux
+##### Mouse settings on Linux
 `xinput set-prop 8 272 2`
 
 <br>
-#### CSS Clearfix
+##### CSS Clearfix
 
 http://www.webtoolkit.info/css-clearfix.html#.VyofoFYrL0o
