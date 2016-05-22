@@ -118,4 +118,47 @@ $(document).mouseup(function (e) {
 });
 ```
 
+<br>
+##### console functions
+```
+console.log();
+console.warn();
+console.info();
+console.debug();
+console.error();
+```
+
+```
+console.log('hello %s, my number is %d and this is my object %o', 'world', 42, {foo: 'bar'});
+```
+
+```
+console.log('hello %cworld', '{font-size: 12px, color: tomato}'); // add css styles to console.log statements
+```
+
+```
+console.group('hello world'); // or .groupCollapse()
+console.log('foo');
+console.log('bar');
+console.groupEnd();
+```
+
+```
+console.count();
+```
+
+```
+console.time('myKey');
+// calculations....
+console.timeEnd('myKey');
+```
+
+```
+console.table(...); // arr of objects output as nice table
+console.table(arr, 'propName'); // arr of objects output as nice table restricted to property(ies)
+```
+
+
+
+
 
