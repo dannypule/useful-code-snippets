@@ -15,11 +15,13 @@ function getQueryParam(param) {
 };
 ```
 
+<br>
 ##### Displays calling function as string
 ```
 console.log("caller is " + arguments.callee.caller);
 ```
 
+<br>
 ##### Prints call stack
 ```
 function print_call_stack() {
@@ -29,18 +31,21 @@ function print_call_stack() {
 }
 ```
 
+<br>
 ##### Remove spaces from a string
 ```
 var str = " thi s str ing has sp aces".replace(/ /g,'');
 console.log(str);
 ```
 
+<br>
 ##### How to copy JSON data from the console
 ```
 // where res.data is the JSON object
 copy(JSON.stringify(res.data))
 ```
 
+<br>
 ##### Random number between max and min
 
 ```
@@ -50,6 +55,7 @@ var randonNumber = Math.ceil(Math.random() * (max - min) + min);
 document.writeln(randonNumber);
 ```
 
+<br>
 ##### Function to validate url where https or http is optional but it will accept parameters etc
 ```
 function validateUrl(value){
@@ -96,7 +102,6 @@ function validateUrl(value){
 ```
 
 <br>
-
 ##### Close drop down menu when other element is clicked
 
 ```
