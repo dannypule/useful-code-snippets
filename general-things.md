@@ -28,7 +28,7 @@ More info: https://help.github.com/articles/changing-a-remote-s-url/
 
 <br>
 ##### Getting unstuck from vim while merging git branches
-
+```
 press "i"
 
 write your merge message
@@ -38,7 +38,7 @@ press "esc"
 write ":wq"
 
 then press enter
-
+```
 <br>
 
 ##### Mouse settings on Linux
@@ -54,4 +54,4 @@ http://www.webtoolkit.info/css-clearfix.html#.VyofoFYrL0o
 
 Paste into console:
 
-javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
+`javascript:document.body.contentEditable='true'; document.designMode='on'; void 0`
