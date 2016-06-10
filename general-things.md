@@ -28,17 +28,17 @@ More info: https://help.github.com/articles/changing-a-remote-s-url/
 
 <br>
 ##### Getting unstuck from vim while merging git branches
-```
-press "i"
 
-write your merge message
+1) press "i"
 
-press "esc"
+2) write your merge message
 
-write ":wq"
+3) press "esc"
 
-then press enter
-```
+4) write ":wq"
+
+5) then press "enter"
+
 <br>
 
 ##### Mouse settings on Linux
