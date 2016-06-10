@@ -48,3 +48,10 @@ then press enter
 ##### CSS Clearfix
 
 http://www.webtoolkit.info/css-clearfix.html#.VyofoFYrL0o
+
+<br>
+##### Make any page's content editable
+
+Paste into console:
+
+javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
