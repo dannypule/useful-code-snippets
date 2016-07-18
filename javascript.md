@@ -158,7 +158,23 @@ console.table(...); // arr of objects output as nice table
 console.table(arr, 'propName'); // arr of objects output as nice table restricted to property(ies)
 ```
 
+<br>
+##### Angular $q promise example
 
+```
+function handleValidationResponses(responses, questions){
+    var saveResponsesPromise = saveResponses('Robin Hood');
 
+    saveResponsesPromise
+      .then(function(res){
+        console.log('succeed ' + res);
+      })
+      .catch(function(err){
+        console.log('fail ' + err);
+      });
+}
 
-
+function saveResponses(name){
+  return $q.reject('Hello, ' + name + '!');
+}
+```
