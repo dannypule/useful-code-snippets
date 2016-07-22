@@ -101,11 +101,11 @@ Once you're set up, deploying is easy:
 
 `git checkout YOUR-TEST-BRANCH`
 
-`git push release-heroku-test master`
+`git push release-heroku-test YOUR-TEST-BRANCH:master`
 
 `git checkout YOUR-PROD-BRANCH`
 
-`git push release-heroku-prod master`
+`git push release-heroku-prod YOUR-PROD-BRANCH:master`
 
 <br>
 View deployed code here:
