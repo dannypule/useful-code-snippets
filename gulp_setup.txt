@@ -1,0 +1,127 @@
+<!-- build:css dist/css/css.css -->
+<!-- endbuild -->
+
+<!-- build:js dist/js/scripts.js -->
+<!-- endbuild -->
+
+
+{
+  "name": "osca_alerts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "gulp build",
+    "start": "node serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "engines": {
+    "node": "4.4.x",
+    "npm": "3.8.x"
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "colors": "1.1.2",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-cache-bust": "1.0.2",
+    "gulp-connect": "4.1.0",
+    "gulp-if": "2.0.1",
+    "gulp-livereload": "3.8.1",
+    "gulp-minify-css": "1.2.4",
+    "gulp-notify": "2.2.0",
+    "gulp-sass": "2.3.2",
+    "gulp-uglify": "1.5.4",
+    "gulp-useref": "3.1.0",
+    "gzippo": "0.2.0",
+    "highcharts": "4.2.5",
+    "morgan": "1.7.0",
+    "openurl": "1.1.1"
+  }
+}
+
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var notify = require("gulp-notify");
+var exec = require('child_process').exec;
+var useref = require('gulp-useref');
+var gulpif = require('gulp-if');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
+var cachebust = require('gulp-cache-bust');
+
+// task for general styles
+gulp.task('styles', function() {
+    gulp.src('app/styles/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 20 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./app/styles/css/'))
+        .pipe(notify("CSS processing complete."));
+});
+
+// task for ri theme specific styles
+gulp.task('theme_ri_styles', function() {
+    gulp.src('app/themes/ri/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 20 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./app/themes/ri/css/'))
+        .pipe(notify("CSS processing complete."));
+});
+ 
+gulp.task('build', function () { 
+    return gulp.src('./app/index.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify(), cachebust()))
+        .pipe(gulpif('*.css', minifyCss(), cachebust()))
+        .pipe(gulp.dest('./app'));
+});
+
+// General Gulp watch task
+gulp.task('watch',function() {
+    gulp.watch('app/styles/sass/**/*.scss',['styles']); // watch for general styles
+    gulp.watch('app/themes/ri/sass/**/*.scss',['theme_ri_styles']); // watch for ri theme specific styles
+});
+
+
+// gulp serve task
+gulp.task('serve', function (cb) {
+    gulp.watch('app/styles/sass/**/*.scss',['styles']); // watch for general styles
+    gulp.watch('app/themes/ri/sass/**/*.scss',['theme_ri_styles']); // watch for ri theme specific styles
+
+    exec('nodemon serve.js', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+
+    console.log('Serving app at http://localhost:5566...');
+});
+
+gulp.task('w', ['serve']);
+
+
+//////////////////////////////////////// HOW-TOs ////////////////////////////////////////////
+
+//// Adding a new theme folder to Gulp (similar to 'app/themes/ri' folder) ////
+//// 1) Add a task for theme (copy the ri theme task and change 'ri' to the name of your theme's folder)
+//// 2) Add watch task to the task labelled 'General Gulp watch task' (copy the watch task for 'ri' and change 'ri' to the name of your theme's folder)
+//// 3) Add a watch task to the task labelled 'gulp serve task' (copy the watch task for 'ri' and change 'ri' to the name of your theme's folder)
+//// 4) When ready to use or test this theme, change the path to the css file in index.html
