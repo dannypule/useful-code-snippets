@@ -62,35 +62,54 @@ Paste into console:
 Install Heroku toolbelt from here: https://toolbelt.heroku.com/
 
 On your computer, open the terminal in your app's root folder
+
 WINDOWS USERS ENTER THIS LINE: `start cmd` 
+
 This opens cmd.exe and is a workaround to a Windows issue with Heroku when you start the command line any other way. Don't ask me why this works but I had to do this on my Windows 10 machine. More info here: https://github.com/heroku/cli/issues/84. Anyway, onwards
 
 `heroku login`
+
 Input your Heroku login email and hit return.
+
 Input your Heroku password and hit return.
 
 `ssh-keygen -t rsa` (press enter all the way through the prompts) --- TODO - not sure if needed
+
 `heroku keys:add` (type 'y' and hit return when prompted) --- TODO - not sure if needed
 
+<br>
 CREATE and PUSH to 'test'
+
 `git remote add release-heroku-test https://git.heroku.com/YOUR-TEST-HEROKU-APP.git` (you've now added your 'test' remote)
+
 `git push release-heroku-test master` (you've now deployed to 'test')
 
+<br>
 CREATE and PUSH to 'prod'
+
 `git remote add release-heroku-prod https://git.heroku.com/YOUR-PRODUCTION-HEROKU-APP.git` (you've now added your 'prod' remote)
+
 `git push release-heroku-prod master` (you've now deployed to 'prod')
 
 `git remote -v` (this shows you a list of your remotes and confirm your previous actions)
 
+<br>
 ---------------------------------
+<br>
 
 Once you're set up, deploying is easy:
+
 `git checkout YOUR-TEST-BRANCH`
+
 `git push release-heroku-test master`
 
 `git checkout YOUR-PROD-BRANCH`
+
 `git push release-heroku-prod master`
 
+<br>
 View deployed code here:
+
 `https://YOUR-TEST-HEROKU-APP.herokuapp.com`
+
 `https://YOUR-PRODUCTION-HEROKU-APP.herokuapp.com`
