@@ -178,3 +178,9 @@ function saveResponses(name){
   return $q.reject('Hello, ' + name + '!');
 }
 ```
+
+#### Make any page editable
+
+```
+javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
+```
