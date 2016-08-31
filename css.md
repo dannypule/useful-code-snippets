@@ -57,8 +57,27 @@ img {
 }
 ```
 
+##### Styling scrollbars for webkit browsers
+```
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+}
 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 2px;
+    border-radius: 8px;
+    background-color: #C3C3C3;
+    border: 1px solid #f1f1f1;
+}
 
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+```
 
 
 
