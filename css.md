@@ -79,7 +79,11 @@ img {
 }
 ```
 
-
+##### Nice transition (scss)
+```
+$snappy: cubic-bezier(0.55, 0, 0.1, 1);
+transition: all .4s $snappy;
+```
 
 
 
