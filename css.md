@@ -86,6 +86,28 @@ transition: all .4s $snappy;
 ```
 
 
+##### Simple Bootstrap style row and col with 50% width (no padding or margins etc...)
+###### You could easily create your own mini mobile responsive grid by adding 'xs, sm, md, lg' etc...
+```
+.row {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col-50 {
+        float: left;
+        width: 50%;
+    }
+    
+    .col-25 {
+        float: left;
+        width: 25%;
+    }
+}
+```
 
 
 
