@@ -8,6 +8,10 @@
 
 [CSS code snippets](https://github.com/dannypule/useful-code-snippets/blob/master/css.md)
 
+[General](https://github.com/dannypule/useful-code-snippets/blob/master/general-things.md)
+
+[Solve Very Specific Issues (SVSI)](https://github.com/dannypule/useful-code-snippets/blob/master/solve_specific_issues.md)
+
 
 
 
