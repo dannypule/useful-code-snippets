@@ -109,8 +109,11 @@ transition: all .4s $snappy;
 }
 ```
 
-
-
+##### Nice transition (scss)
+```shell
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+```
 
 
 
