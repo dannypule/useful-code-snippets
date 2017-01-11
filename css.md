@@ -110,7 +110,7 @@ transition: all .4s $snappy;
 ```
 
 
-##### Nice transition (scss)
+##### Text
 ```
 text-rendering: optimizeLegibility !important;
 -webkit-font-smoothing: antialiased !important;
