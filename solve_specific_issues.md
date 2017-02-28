@@ -14,4 +14,8 @@ Macbook Pro Early 2015 model using El Capitan.
 Xampp version 7.0.5-0
 
 
-### New topic will go here....
+### Saving current versions of npm packages
+
+After installing latest versions with "*" as the version number.
+
+http://stackoverflow.com/questions/16618769/whats-the-npm-command-that-fills-in-dependency-version-numbers
