@@ -10,3 +10,7 @@ app.use(function (req, res, next) {
     res.header('Pragma', 'no-cache');
     next()
 });
+
+##### Uninstall node on a mac
+
+https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x
