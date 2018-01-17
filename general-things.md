@@ -121,4 +121,12 @@ View deployed code here:
 `sudo mv /usr/bin/git /usr/bin/git-apple`
 `brew install git`
 `which git` (should now be /usr/local/bin/git)
+
+##### signing into git using two factor auth
+
+Generate a personal access token here: https://github.com/settings/tokens
+
+Cache username and password in the command line `git config --global credential.helper osxkeychain`
+
+When entering username and password (e.g. while pushing), use the personal access token.
  
