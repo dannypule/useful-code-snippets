@@ -113,3 +113,12 @@ View deployed code here:
 `https://YOUR-TEST-HEROKU-APP.herokuapp.com`
 
 `https://YOUR-PRODUCTION-HEROKU-APP.herokuapp.com`
+
+##### switch from apple git to updated git
+
+`git --version`
+`which git`
+`sudo mv /usr/bin/git /usr/bin/git-apple`
+`brew install git`
+`which git` (should now be /usr/local/bin/git)
+ 
