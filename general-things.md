@@ -8,11 +8,6 @@ BOOM. All there.
 
 <br>
 
-##### `git co` as a shortcut for `git checkout`
-`git config --global alias.co checkout`
-
-<br>
-
 ##### Change remote git repo
 
 `git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git`
@@ -122,7 +117,7 @@ View deployed code here:
 `brew install git`
 `which git` (should now be /usr/local/bin/git)
 
-##### signing into git using two factor auth
+##### signing into github using two factor auth via the cmd line
 
 Generate a personal access token here: https://github.com/settings/tokens
 
