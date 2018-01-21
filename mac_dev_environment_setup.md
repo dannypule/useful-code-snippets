@@ -2,6 +2,10 @@
 ### Installing postgres
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
 
+install with, `brew install postgresql`
+
+Start postgres with, `brew services start postgresql`
+
 Login into the postgres portal using `sudo -u postgres psql`
 
 Uninstalling postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
