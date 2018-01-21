@@ -4,6 +4,8 @@ https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-o
 
 Login into the postgres portal using `sudo -u postgres psql`
 
+Uninstalling postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
+
 
 ### Installing nvm and setting default node version
 
