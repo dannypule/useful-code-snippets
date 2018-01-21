@@ -109,19 +109,5 @@ View deployed code here:
 
 `https://YOUR-PRODUCTION-HEROKU-APP.herokuapp.com`
 
-##### switch from apple git to updated git
 
-`git --version`
-`which git`
-`sudo mv /usr/bin/git /usr/bin/git-apple`
-`brew install git`
-`which git` (should now be /usr/local/bin/git)
-
-##### signing into github using two factor auth via the cmd line
-
-Generate a personal access token here: https://github.com/settings/tokens
-
-Cache username and password in the command line `git config --global credential.helper osxkeychain`
-
-When entering username and password (e.g. while pushing), use the personal access token.
  
