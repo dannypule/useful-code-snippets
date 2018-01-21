@@ -2,6 +2,8 @@
 ### Installing postgres
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
 
+Login into the postgres portal using `sudo -u postgres psql`
+
 
 ### Installing nvm and setting default node version
 
