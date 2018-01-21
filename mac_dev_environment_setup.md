@@ -8,7 +8,7 @@ Start postgres with, `brew services start postgresql`
 
 Login into the postgres portal using `psql postgres`
 
-Uninstalling postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
+Uninstalling postgres (via homebrew): https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
 
 
 ### Installing nvm and setting default node version
