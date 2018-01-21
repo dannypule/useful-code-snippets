@@ -2,7 +2,7 @@
 ### Installing postgres
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
 
-install with, `brew install postgresql`
+Install with, `brew install postgresql`
 
 Start postgres with, `brew services start postgresql`
 
