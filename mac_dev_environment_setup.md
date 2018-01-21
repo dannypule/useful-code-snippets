@@ -6,7 +6,7 @@ Install with, `brew install postgresql`
 
 Start postgres with, `brew services start postgresql`
 
-Login into the postgres portal using `sudo -u postgres psql`
+Login into the postgres portal using `psql postgres`
 
 Uninstalling postgres: https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
 
