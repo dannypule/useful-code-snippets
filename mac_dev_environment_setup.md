@@ -10,6 +10,12 @@ Login into the postgres portal using `psql postgres`
 
 Uninstalling postgres (via homebrew): https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
 
+### Postgresql client
+
+http://www.psequel.com
+
+After entering connection details for remote db (created via heroku) select 'Connect via SSL' then click 'Connect'
+
 
 ### Installing nvm and setting default node version
 
