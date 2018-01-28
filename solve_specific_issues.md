@@ -24,6 +24,3 @@ http://stackoverflow.com/questions/16618769/whats-the-npm-command-that-fills-in-
 ### Teknet mouse on mac
 http://plentycom.jp/en/steermouse/download.php
 http://www.usboverdrive.com/USBOverdrive/Download.html
-
-### nvm command not found on mac. Add this to .zshrc and restart iterm2
-source ~/.nvm/nvm.sh
