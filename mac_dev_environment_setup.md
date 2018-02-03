@@ -1,3 +1,45 @@
+### List of Apps
+
+Chrome
+
+Chrome Canary
+
+Contexts for mac: Rules -> Group windows manually... Number Switcher -> Left Command <number>
+
+Pathfinder mac
+
+Slack
+
+Alfred: Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Alfred to cmd + space.
+
+Spotify
+
+iTerm2: Preferences -> Profiles -> Reuse previous sessions directory
+
+Homebrew
+
+Oh My Zsh
+
+NVM - Node Version Manager
+
+Node/npm
+
+Visual Studio Code
+
+Postman
+
+Postgres (install instructions below)
+
+PSequel
+
+Docker
+
+Greenshot (appstore)
+
+Dropbox
+
+Google Drive
+
 
 ### Installing postgres
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
@@ -43,3 +85,15 @@ Generate a personal access token here: https://github.com/settings/tokens
 Cache username and password in the command line `git config --global credential.helper osxkeychain`
 
 When entering username and password (e.g. while pushing), use the personal access token.
+
+
+### nvm command not found on mac
+
+`git clone http://github.com/creationix/nvm.git .nvm`
+
+Add this to .zshrc and restart iterm2
+
+`source ~/.nvm/nvm.sh`
+
+
+
