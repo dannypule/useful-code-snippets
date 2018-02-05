@@ -34,7 +34,7 @@ PSequel
 
 Docker
 
-Greenshot (appstore)
+Greenshot (appstore) (shortcut: ctrl + .)
 
 Dropbox
 
