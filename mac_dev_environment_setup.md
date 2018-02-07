@@ -30,7 +30,7 @@ Postman
 
 Postgres (install instructions below)
 
-PSequel
+PSequel (see installation steps below)
 
 Docker
 
