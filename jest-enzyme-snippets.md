@@ -13,6 +13,6 @@ expect(button.props().disabled ).toBe(false);
 
 ```
 expect(
-        wrapper.state().item
-      ).toEqual(item);
-    ```
+  wrapper.state().item
+).toEqual(item);
+```
