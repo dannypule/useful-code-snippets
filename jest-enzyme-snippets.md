@@ -16,3 +16,27 @@ expect(
   wrapper.state().item
 ).toEqual(item);
 ```
+
+```
+const form = wrapper.find('form').first(); form.simulate('submit', {
+  preventDefault: () => {},
+});
+```
+
+```
+expect(
+  wrapper.state().items
+).toContain(item);
+```
+
+```
+expect(
+  wrapper.containsMatchingElement(<td>{item}</td>) 
+).toBe(true);
+```
+
+```
+expect(
+  wrapper.contains(<td>{item}</td>) 
+).toBe(true);
+```
