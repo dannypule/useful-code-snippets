@@ -1,4 +1,4 @@
-##Jest and Enzyme snippets
+# Jest and Enzyme snippets
 
 ```
 const input = wrapper.find('input').first(); input.simulate('change', {
