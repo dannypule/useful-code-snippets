@@ -40,3 +40,11 @@ expect(
   wrapper.contains(<td>{item}</td>) 
 ).toBe(true);
 ```
+
+```
+const input = wrapper.find('input').first(); expect(
+  input.props().value
+).toEqual('');
+```
+
+
