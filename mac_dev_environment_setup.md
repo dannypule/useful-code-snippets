@@ -40,6 +40,8 @@ Dropbox
 
 Google Drive
 
+httpie (brew install httpie) - wrapper around cURL
+
 
 ### Installing postgres
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
