@@ -49,7 +49,18 @@ const input = wrapper.find('input').first(); expect(
 
 ```
 const myMock = jest.fn(); 
+console.log(myMock.mock.calls.length); // -> 0
+myMock('Paris'); 
+console.log(myMock.mock.calls.length); // -> 1
 myMock('Paris', 'Amsterdam'); 
-console.log(myMock.mock.calls); // 'Paris', 'Amsterdam'
-console.log(myMock.mock.calls.length); // 2
+console.log(myMock.mock.calls.length); // -> 2
+```
+
+```
+const myMock = jest.fn(); console.log(myMock.mock.calls);
+// -> []
+myMock('Paris'); console.log(myMock.mock.calls);
+// -> [ [ 'Paris' ] ]
+myMock('Paris', 'Amsterdam'); console.log(myMock.mock.calls);
+// -> [ [ 'Paris' ], [ 'Paris', 'Amsterdam' ] ]
 ```
