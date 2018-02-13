@@ -1,4 +1,4 @@
-# Jest and Enzyme snippets
+# Testing (Jest/Enzyme)
 
 ```
 const input = wrapper.find('input').first(); input.simulate('change', {
@@ -86,3 +86,11 @@ afterEach(() => {
 });
 ```
 
+```
+it('should call `Client.search() with `value`', () => {
+  const invocationArgs = Client.search.mock.calls[0];
+  expect(
+   invocationArgs[0]
+  ).toEqual(value);
+});
+```
