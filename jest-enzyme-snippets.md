@@ -65,6 +65,7 @@ myMock('Paris', 'Amsterdam'); console.log(myMock.mock.calls);
 // -> [ [ 'Paris' ], [ 'Paris', 'Amsterdam' ] ]
 ```
 
+
 Jest has a mock generator for entire modules
 ```
 import Client from '../Client'; 
