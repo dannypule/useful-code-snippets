@@ -47,4 +47,9 @@ const input = wrapper.find('input').first(); expect(
 ).toEqual('');
 ```
 
-
+```
+const myMock = jest.fn(); 
+myMock('Paris', 'Amsterdam'); 
+console.log(myMock.mock.calls); // 'Paris', 'Amsterdam'
+console.log(myMock.mock.calls.length); // 2
+```
