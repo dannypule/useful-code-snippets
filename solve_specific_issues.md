@@ -24,3 +24,6 @@ http://stackoverflow.com/questions/16618769/whats-the-npm-command-that-fills-in-
 ### Teknet mouse on mac
 http://plentycom.jp/en/steermouse/download.php
 http://www.usboverdrive.com/USBOverdrive/Download.html
+
+### Open fork and have it be aware of node when using nvm
+open /Applications/Fork.app/Contents/MacOS/Fork
