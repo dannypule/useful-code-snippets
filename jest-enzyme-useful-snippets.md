@@ -94,3 +94,14 @@ it('should call `Client.search() with `value`', () => {
   ).toEqual(value);
 });
 ```
+
+```
+const field = 'email'
+it('should call setFormField when prop setField is called', () => {
+  const { wrapper, instance } = renderedComponent
+  expect(instance.props.setFormField).not.toHaveBeenCalled()
+  wrapper.find(`Connect(Input) [name="${field}"]`).prop('setField')(field)(event)
+  expect(instance.props.setFormField).toHaveBeenCalledTimes(1)
+  expect(instance.props.setFormField).toHaveBeenLastCalledWith('footerNewsletter', field, event.target.value)
+})
+```
