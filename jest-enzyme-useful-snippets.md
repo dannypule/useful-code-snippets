@@ -105,3 +105,61 @@ it('should call setFormField when prop setField is called', () => {
   expect(instance.props.setFormField).toHaveBeenLastCalledWith('footerNewsletter', field, event.target.value)
 })
 ```
+
+```
+describe('@events', () => {
+  let renderedComponent
+  const event = {
+    target: {
+      value: 123
+    },
+    preventDefault: jest.fn()
+  }
+  beforeEach(() => {
+    renderedComponent = renderComponent(initialProps)
+    jest.resetAllMocks()
+  })
+  describe('email Input', () => {
+    const field = 'email'
+    it('should call setFormField when prop setField is called', () => {
+      const { wrapper, instance } = renderedComponent
+      expect(instance.props.setFormField).not.toHaveBeenCalled()
+      wrapper.find(`Connect(Input) [name="email"]`).prop('setField')(field)(event)
+      expect(instance.props.setFormField).toHaveBeenCalledTimes(1)
+      expect(instance.props.setFormField).toHaveBeenLastCalledWith('footerNewsletter', field, event.target.value)
+    })
+    it('should call touchedFormField when prop touchedField is called', () => {
+      const { wrapper, instance } = renderedComponent
+      expect(instance.props.touchedFormField).not.toHaveBeenCalled()
+      wrapper.find(`Connect(Input) [name="email"]`).prop('touchedField')(field)(event)
+      expect(instance.props.touchedFormField).toHaveBeenCalledTimes(1)
+      expect(instance.props.touchedFormField).toHaveBeenLastCalledWith('footerNewsletter', field)
+    })
+  })
+  describe('form submit', () => {
+    it('should call e.preventDefault() ', () => {
+      const { wrapper } = renderedComponent
+      expect(event.preventDefault).not.toHaveBeenCalled()
+      wrapper.find('form').simulate('submit', event)
+      expect(event.preventDefault).toHaveBeenCalledTimes(1)
+    })
+    it('should call redirectUser if no errors', () => {
+      const { instance, wrapper } = renderedComponent
+      instance.getErrors = jest.fn(() => ({}))
+      instance.redirectUser = jest.fn()
+      expect(instance.redirectUser).not.toHaveBeenCalled()
+      wrapper.find('form').simulate('submit', event)
+      expect(instance.redirectUser).toHaveBeenCalledTimes(1)
+    })
+    it('should not call redirectUser if errors', () => {
+      const { instance, wrapper } = renderedComponent
+      instance.redirectUser = jest.fn()
+      instance.getErrors = jest.fn(() => ({
+        email: 'has errors'
+      }))
+      wrapper.find('form').simulate('submit', event)
+      expect(instance.redirectUser).not.toHaveBeenCalled()
+    })
+  })
+})
+```
