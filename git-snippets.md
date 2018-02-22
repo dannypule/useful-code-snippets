@@ -24,3 +24,11 @@ in the editor, use s or squash to squash those commits into to the last picked c
 in next editor window, you can edit the commit message or `:wq` to save and exit
 in next window, `:wq` to save and exit
 ```
+
+```
+// instruct git to remember how you handled merge conflicts and fix them the same way again
+git config --global rerere.enabled true
+
+// https://hackernoon.com/fix-conflicts-only-once-with-git-rerere-7d116b2cec67
+// https://git-scm.com/book/en/v2/Git-Tools-Rerere
+```
