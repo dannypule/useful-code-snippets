@@ -32,3 +32,10 @@ git config --global rerere.enabled true
 // https://hackernoon.com/fix-conflicts-only-once-with-git-rerere-7d116b2cec67
 // https://git-scm.com/book/en/v2/Git-Tools-Rerere
 ```
+
+```
+// pull and rebase if you have the "x up y down" issue
+gl --rebase
+```
+
+
