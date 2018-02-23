@@ -38,4 +38,13 @@ git config --global rerere.enabled true
 gl --rebase
 ```
 
+```
+// unstage commited items
+git reset --soft HEAD^
+```
+
+```
+// reset to specific commit
+git reset --hard commit-hash-here
+```
 
