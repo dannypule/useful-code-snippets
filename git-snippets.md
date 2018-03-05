@@ -39,7 +39,7 @@ gl --rebase
 ```
 
 ```
-// unstage commited items
+// undo last commit
 git reset --soft HEAD^
 ```
 
