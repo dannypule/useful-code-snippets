@@ -1,0 +1,20 @@
+```
+// package.json scripts
+"jest": "BABEL_ENV=jestTest jest",
+"jest:coverage": "npm run jest -- --coverage"
+```
+
+```
+// get coverage on one specific file
+npm run jest -- --coverage [path/to/file]
+
+// watch one specific file
+npm run jest -- --watch --coverage [path/to/file]
+```
+
+VS (using plugin to view coverage in the .js or .jsx file after running `coverage` on the .spex.js file:
+https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters)
+
+NOT SURE IF THIS IS STILL VALID:
+NOTE: the html coverage report may contain errors. This is because we currently use the babel reqire plugin which is not compatible with nyc (jest uses this tool for coverage).
+
