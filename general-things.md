@@ -109,5 +109,10 @@ View deployed code here:
 
 `https://YOUR-PRODUCTION-HEROKU-APP.herokuapp.com`
 
+##### How to copy JSON data from the console
+```
+// where res.data is the JSON object
+copy(JSON.stringify(res.data))
+```
 
  
