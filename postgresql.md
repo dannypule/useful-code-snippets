@@ -6,3 +6,9 @@ https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-o
 
 #### Checking if it's running
 `postgres -V`
+
+#### Run the cli
+`psql postgres`
+
+#### Show existing users
+`\du`
