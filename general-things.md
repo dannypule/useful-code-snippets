@@ -115,4 +115,9 @@ View deployed code here:
 copy(JSON.stringify(res.data))
 ```
 
- 
+##### Start redis
+`redis-server . &`
+
+##### Check if redis is running
+`redis-cli ping`
+More redis info here: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
