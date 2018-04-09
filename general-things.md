@@ -121,3 +121,6 @@ copy(JSON.stringify(res.data))
 ##### Check if redis is running
 `redis-cli ping`
 More redis info here: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
+
+##### Get value of cookie in browser console
+`document.cookie.split(';').filter(name => name.includes('featuresOverride'))[0].split("=")[1]`
