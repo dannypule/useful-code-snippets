@@ -163,3 +163,18 @@ describe('@events', () => {
   })
 })
 ```
+
+```
+import React from 'react'
+import { shallow, mount } from 'enzyme'
+import toJson from 'enzyme-to-json'
+const wrapper = shallow( // wrapper
+  <Component {...props}>{children}</Component>,
+  { ...mountCommonContext, ...mountOptions }
+)
+
+const instance = wrapper.instance() // instance - used like expect(instance.props).toEqual(props) etc etc
+const getTree = () => toJson(wrapper) // getTree() used like expect(renderComponent(props).getTree()).toMatchSnapshot()
+
+component.wrapper.find(selector).simulate(eventName, event)
+```
