@@ -61,6 +61,7 @@ document.writeln(randonNumber);
 
 <br>
 ##### Function to validate url where https or http is optional but it will accept parameters etc
+
 ```
 function validateUrl(value){
 	var re_weburl = new RegExp(
@@ -124,6 +125,7 @@ $(document).mouseup(function (e) {
 
 <br>
 ##### console functions
+
 ```
 console.log();
 console.warn();
@@ -190,6 +192,7 @@ javascript:document.body.contentEditable='true'; document.designMode='on'; void 
 ```
 
 #### Promise
+
 ```
 return new Promise((resolve, reject) => {
     if(success){
@@ -200,4 +203,7 @@ return new Promise((resolve, reject) => {
 })
 ```
 
-const value = ev.target.value.replace(/\s/g, '')
+```
+const stringWithSpaces = "1 2 3]]"
+const stringWithNoSpaces = stringWithSpaces.replace(/\s/g, '')
+```
