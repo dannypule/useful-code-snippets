@@ -17,12 +17,14 @@ function getQueryParam(param) {
 
 <br>
 ##### Displays calling function as string
+
 ```
 console.log("caller is " + arguments.callee.caller);
 ```
 
 <br>
 ##### Prints call stack
+
 ```
 function print_call_stack() {
   var stack = new Error().stack;
@@ -33,6 +35,7 @@ function print_call_stack() {
 
 <br>
 ##### Remove spaces from a string
+
 ```
 var str = " thi s str ing has sp aces".replace(/ /g,'');
 console.log(str);
@@ -40,6 +43,7 @@ console.log(str);
 
 <br>
 ##### How to copy JSON data from the console
+
 ```
 // where res.data is the JSON object
 copy(JSON.stringify(res.data))
@@ -195,3 +199,5 @@ return new Promise((resolve, reject) => {
     }
 })
 ```
+
+const value = ev.target.value.replace(/\s/g, '')
