@@ -207,3 +207,12 @@ return new Promise((resolve, reject) => {
 const stringWithSpaces = "1 2 3]]"
 const stringWithNoSpaces = stringWithSpaces.replace(/\s/g, '')
 ```
+
+```
+const isIOS = process.browser && !!(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iP[ao]d/i))
+<Select
+  firstDisabled={l`Please select`}
+  autofocus={!isIOS}
+  ...
+/>
+```
