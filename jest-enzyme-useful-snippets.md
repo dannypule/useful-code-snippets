@@ -178,3 +178,12 @@ const getTree = () => toJson(wrapper) // getTree() used like expect(renderCompon
 
 component.wrapper.find(selector).simulate(eventName, event)
 ```
+
+```
+// click on the component
+const props = { someProp: jest.fn() } 
+const { wrapper } = renderComponent(props)
+wrapper.node.props.onClick()
+// .... stuff happens and prop gets called - maybe with an instance method or something
+expect(props.someProp).toHaveBeenCalledTimes(1)
+```
