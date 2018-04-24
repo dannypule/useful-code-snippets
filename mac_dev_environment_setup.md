@@ -1,46 +1,70 @@
 ### List of Apps
 
-Chrome
+### Chrome
 
-Chrome Canary
+### Chrome Canary
 
-Contexts for mac: Rules -> Group windows manually... Number Switcher -> Left Command <number>
+### Contexts for mac: Rules -> Group windows manually... Number Switcher -> Left Command <number>
 
-Pathfinder mac
+### Pathfinder mac
 
-Slack
+### Slack
 
-Alfred: Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Alfred to cmd + space.
+### Alfred: 
+Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Alfred to cmd + space.
 
-Spotify
+### Spotify
 
-iTerm2: Preferences -> Profiles -> Reuse previous sessions directory
+### iTerm2: 
+Preferences -> Profiles -> Reuse previous sessions directory
 
-Homebrew
+### Homebrew
 
-Oh My Zsh
+### Oh My Zsh
 
-NVM - Node Version Manager
+### NVM - Node Version Manager `brew install nvm`
 
-Node/npm
+You should create NVM's working directory if it doesn't exist:
 
-Visual Studio Code
+```
+mkdir ~/.nvm
+```
+Add the following to ~/.zshrc or your desired shell
+configuration file:
 
-Postman
+```
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+or
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+```
+If you get a permissions error when installing nvm, fix permissions using:
 
-Postgres (install instructions below)
+`sudo chown -R $(whoami) /usr/local/var/homebrew`
 
-PSequel (see installation steps below)
+### Node/npm via nvm
+(first restart iTerm2)
+`nvm install 8.9.4` install specific version or `nvm install --lts`
+`nvm use 8.9.4` or `nvm use --lts`
 
-Docker
+### Visual Studio Code
 
-Greenshot (appstore) (shortcut: ctrl + .)
+### Postman
 
-Dropbox
+### Postgres (install instructions below)
 
-Google Drive
+### PSequel (see installation steps below)
 
-httpie (brew install httpie) - wrapper around cURL
+### Docker
+
+### Greenshot (appstore) (shortcut: ctrl + .)
+
+### Dropbox
+
+### Google Drive
+
+### httpie (brew install httpie) - wrapper around cURL
 
 
 ### Installing postgres
@@ -90,7 +114,16 @@ When entering username and password (e.g. while pushing), use the personal acces
 
 
 ### nvm command not found on mac
+- Restart iTerm2 after initial installation. Then retry.
+- Ensure nvm directory was created `mkdir ~/.nvm`
+- Add the following to .zshrc:
+```
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+or
+```
 
+or last option would be:
 `git clone http://github.com/creationix/nvm.git .nvm`
 
 Add this to .zshrc and restart iterm2
