@@ -49,6 +49,9 @@ If you get a permissions error when installing nvm, fix permissions using:
 `nvm use 8.9.4` or `nvm use --lts`
 
 ### Visual Studio Code
+- setup user preferences
+- install extensions
+- setup custom keybinding for re-do. `cmd + shift + P`, Search for 'Open Keyboard Shortcuts', Search for 'redo', edit it to `cmd + Y`
 
 ### Postman
 
