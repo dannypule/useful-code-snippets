@@ -48,3 +48,6 @@ git reset --soft HEAD^
 git reset --hard commit-hash-here
 ```
 
+```
+wrapper.setProps({ myCoolProp: true })
+```
