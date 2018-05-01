@@ -187,3 +187,7 @@ wrapper.node.props.onClick()
 // .... stuff happens and prop gets called - maybe with an instance method or something
 expect(props.someProp).toHaveBeenCalledTimes(1)
 ```
+
+```
+wrapper.setProps({ myCoolProp: true })
+```
