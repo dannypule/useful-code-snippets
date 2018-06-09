@@ -6,27 +6,29 @@
 
 ### Contexts for mac: 
 
-Rules -> Group windows manually
+Rules -> Select "Group windows manually"
 
-Number of groups: 3
+Rules -> Move the slider for "Number of groups" to 3
 
-Number Switcher -> Left Command <number>
+Number Switcher -> Tick "Left Command <number>"
+  
+Number Switcher -> Tick "Show Numbers on Sidebar"
 
-### Pathfinder mac
+### [Pathfinder mac](https://cocoatech.com/#/)
 
-### Slack
+### [Slack](https://slack.com/downloads/osx)
 
-### Alfred: 
+### [Alfred](https://www.alfredapp.com/)
 Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Alfred to cmd + space.
 
-### Spotify
+### [Spotify](https://www.spotify.com/uk/download/mac/)
 
-### iTerm2: 
+### [iTerm2](https://www.iterm2.com/) 
 Preferences -> Profiles -> Reuse previous sessions directory
 
-### Homebrew
+### [Homebrew](https://brew.sh/)
 
-### Oh My Zsh
+### [Oh My Zsh](http://ohmyz.sh/)
 
 ### NVM - Node Version Manager `brew install nvm`
 
@@ -54,24 +56,25 @@ If you get a permissions error when installing nvm, fix permissions using:
 `nvm install 8.9.4` install specific version or `nvm install --lts`
 `nvm use 8.9.4` or `nvm use --lts`
 
-### Visual Studio Code
+### [Visual Studio Code](https://code.visualstudio.com/download)
 - setup user preferences
 - install extensions
 - setup custom keybinding for re-do. `cmd + shift + P`, Search for 'Open Keyboard Shortcuts', Search for 'redo', edit it to `cmd + Y`
 
-### Postman
+### [Postman](https://www.getpostman.com/apps)
 
 ### Postgres (install instructions below)
 
 ### PSequel (see installation steps below)
 
-### Docker
+### [Docker](https://docs.docker.com/v17.09/docker-for-mac/install/)
+Set available RAM to 4GB
 
 ### Greenshot (appstore) (shortcut: ctrl + .)
 
-### Dropbox
+### [Dropbox](https://www.dropbox.com/en_GB/downloading)
 
-### Google Drive
+### [Google Drive](https://www.google.co.uk/drive/download/)
 
 ### httpie (brew install httpie) - wrapper around cURL
 
@@ -87,9 +90,7 @@ Login into the postgres portal using `psql postgres`
 
 Uninstalling postgres (via homebrew): https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
 
-### Postgresql client
-
-http://www.psequel.com
+### [Postgresql client](http://www.psequel.com/)
 
 After entering connection details for remote db (created via heroku) select 'Connect via SSL' then click 'Connect'
 
@@ -115,7 +116,7 @@ source ~/.nvm/nvm.sh
 
 ### signing into github using two factor auth via the cmd line
 
-Generate a personal access token here: https://github.com/settings/tokens
+Re-generate a personal access token called "macbook-home" here: https://github.com/settings/tokens
 
 Cache username and password in the command line `git config --global credential.helper osxkeychain`
 
@@ -125,17 +126,17 @@ When entering username and password (e.g. while pushing), use the personal acces
 ### nvm command not found on mac
 - Restart iTerm2 after initial installation. Then retry.
 - Ensure nvm directory was created `mkdir ~/.nvm`
-- Add the following to .zshrc:
+- Ensure the following is in .zshrc:
 ```
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 or
 ```
 
 or last option would be:
 `git clone http://github.com/creationix/nvm.git .nvm`
 
-Add this to .zshrc and restart iterm2
+Then after cloning the repo this to .zshrc and restart iterm2
 
 `source ~/.nvm/nvm.sh`
 
