@@ -4,7 +4,13 @@
 
 ### Chrome Canary
 
-### Contexts for mac: Rules -> Group windows manually... Number Switcher -> Left Command <number>
+### Contexts for mac: 
+
+Rules -> Group windows manually
+
+Number of groups: 3
+
+Number Switcher -> Left Command <number>
 
 ### Pathfinder mac
 
