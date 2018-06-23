@@ -12,3 +12,6 @@ https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-o
 
 #### Show existing users
 `\du`
+
+#### More useful info - stopping, starting, etc
+https://stackoverflow.com/questions/7975556/how-to-start-postgresql-server-on-mac-os-x
