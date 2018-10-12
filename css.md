@@ -119,7 +119,96 @@ transition: all .4s $snappy;
 }
 ```
 
+##### Sass possibilities
+```
+$breakpoints-map: (
+  xs: $grid-min-width-xs,
+  sm: $grid-min-width-sm,
+  md: $grid-min-width-md,
+  lg: $grid-min-width-lg,
+  xl: $grid-min-width-xl
+);
 
+$font-size-xs-map: (
+  font-size: $font-size-xs,
+  line-height: $line-height-lg,
+  margin-bottom: $space-stack-md
+);
+
+$font-size-sm-map: (
+  font-size: $font-size-sm,
+  line-height: $line-height-lg,
+  margin-bottom: $space-stack-md
+);
+
+$font-size-md-map: (
+  font-size: $font-size-md,
+  line-height: $line-height-md,
+  margin-bottom: $space-stack-md
+);
+
+$font-size-lg-map: (
+  font-size: $font-size-lg,
+  line-height: $line-height-sm,
+  margin-bottom: $space-stack-lg
+);
+
+$font-size-xl-map: (
+  font-size: $font-size-xl,
+  line-height: $line-height-sm,
+  margin-bottom: $space-stack-lg
+);
+
+$font-size-xxl-map: (
+  font-size: $font-size-xxl,
+  line-height: $line-height-sm,
+  margin-bottom: $space-stack-lg
+);
+
+$font-size-xxxl-map: (
+  font-size: $font-size-xxxl,
+  line-height: $line-height-sm,
+  margin-bottom: $space-stack-lg
+);
+
+$font-sizes-map: (
+  xs: $font-size-xs-map,
+  sm: $font-size-sm-map,
+  md: $font-size-md-map,
+  lg: $font-size-lg-map,
+  xl: $font-size-xl-map,
+  xxl: $font-size-xxl-map,
+  xxxl: $font-size-xxxl-map
+);
+
+$font-weights-map: (
+  default: $font-weight-default,
+  medium: $font-weight-medium,
+  bold: $font-weight-bold
+);
+
+@mixin font-size-mixin($font-size-key) {
+  @each $css-key, $css-value in map-get($font-sizes-map, $font-size-key) {
+    #{$css-key}: $css-value;
+  }
+}
+
+@each $grid-size-key, $breakpoint-px-value in $breakpoints-map {
+    @media(min-width: $breakpoint-px-value) { /* stylelint-disable-line at-rule-name-space-after */
+      @each $font-size-key, $font-size-map in $font-sizes-map {
+        &--breakpoint-#{$grid-size-key}--fs-#{$font-size-key} {
+          @include font-size-mixin($font-size-key);
+        }
+      }
+
+      @each $font-weight-key, $font-weight-value in $font-weights-map {
+        &--breakpoint-#{$grid-size-key}--fw-#{$font-weight-key} {
+          font-weight: $font-weight-value;
+        }
+      }
+    }
+}
+```
 
 
 
