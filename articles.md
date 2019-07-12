@@ -1,3 +1,9 @@
+Advanced TypeScript Types 
+
+https://levelup.gitconnected.com/advanced-typescript-types-with-examples-1d144e4eda9e
+
+---
+
 26 VS Code Tools
 
 https://dev.to/jsmanifest/26-miraculous-vs-code-tools-for-javascript-developers-in-2019-50gg
