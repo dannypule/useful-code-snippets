@@ -152,7 +152,7 @@ export interface State {
   };
 }
 
-const initialState = {
+const initialState: State = {
   stuff: {
     data: [],
     loading: false,
