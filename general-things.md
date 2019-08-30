@@ -124,3 +124,56 @@ More redis info here: https://medium.com/@petehouston/install-and-config-redis-o
 
 ##### Get value of cookie in browser console
 `document.cookie.split(';').filter(name => name.includes('featuresOverride'))[0].split("=")[1]`
+
+##### sort dynamically imported Storybook categories
+
+```
+// config.jsx
+import { sortCategoryPaths } from './storybook.utils';
+
+// ...
+
+const req = require.context('../src', true, /.stories.(js|jsx|ts|tsx)$/);
+
+
+function loadStories() {
+  addDecorator(withInfo);
+  addDecorator(withA11y);
+  addDecorator(withIntl);
+  addDecorator(withThemesProvider(themes));
+  addDecorator(withThemeAndGlobalStyles);
+  addDecorator(withKnobs);
+  addParameters({
+    backgrounds: [{ name: 'grey', value: '#f2f2f2', default: true }, { name: 'white', value: '#ffffff' }]
+  });
+  sortCategoryPaths(req.keys()).forEach(req);
+}
+
+configure(loadStories, module);
+```
+
+```
+// storybook.utils.ts
+
+const getFileName = path => {
+  const array = path.split('/');
+  return array[array.length - 1];
+};
+
+export const sortCategoryPaths = arrayOfStories =>
+  arrayOfStories.sort((pathA, pathB) => {
+    const fileA = getFileName(pathA);
+    const fileB = getFileName(pathB);
+
+    if (fileA < fileB) {
+      return -1;
+    }
+
+    if (fileA > fileB) {
+      return 1;
+    }
+
+    return 0;
+  });
+
+```
