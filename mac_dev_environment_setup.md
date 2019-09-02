@@ -1,4 +1,4 @@
-### List of Apps
+## List of Apps
 
 ### Chrome
 
