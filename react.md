@@ -298,3 +298,21 @@ describe('Given a reducer', () => {
   });
 });
 ```
+
+
+## createReducer
+
+```js
+export type GenericAction = { type: string; payload: any };
+
+export const createReducer = <State>(
+  initialState: State,
+  handlers: Record<string, (state: State, action: GenericAction) => State>
+) => {
+  return function reducer(state = initialState, action: GenericAction) {
+    return (handlers[action.type] && handlers[action.type](state, action)) || state;
+  };
+};
+```
+
+
