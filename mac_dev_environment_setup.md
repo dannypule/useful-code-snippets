@@ -38,7 +38,7 @@ You should create NVM's working directory if it doesn't exist:
 mkdir ~/.nvm
 ```
 Add the following to ~/.zshrc or your desired shell
-configuration file:
+configuration file then restart it:
 
 ```
 export NVM_DIR=~/.nvm
@@ -50,6 +50,9 @@ export NVM_DIR="$HOME/.nvm"
 If you get a permissions error when installing nvm, fix permissions using:
 
 `sudo chown -R $(whoami) /usr/local/var/homebrew`
+
+or last option would be:
+`git clone http://github.com/creationix/nvm.git .nvm`
 
 ### Node/npm via nvm
 (first restart iTerm2)
@@ -122,23 +125,6 @@ Cache username and password in the command line `git config --global credential.
 
 When entering username and password (e.g. while pushing), use the personal access token.
 
-
-### nvm command not found on mac
-- Restart iTerm2 after initial installation. Then retry.
-- Ensure nvm directory was created `mkdir ~/.nvm`
-- Ensure the following is in .zshrc:
-```
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-or
-```
-
-or last option would be:
-`git clone http://github.com/creationix/nvm.git .nvm`
-
-Then after cloning the repo this to .zshrc and restart iterm2
-
-`source ~/.nvm/nvm.sh`
 
 
 
