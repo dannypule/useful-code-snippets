@@ -70,6 +70,8 @@ or last option would be:
 
 ### PSequel (see installation steps below)
 
+### Fork https://git-fork.com/
+
 ### [Docker](https://docs.docker.com/v17.09/docker-for-mac/install/)
 Set available RAM to 4GB
 
