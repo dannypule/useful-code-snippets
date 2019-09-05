@@ -2,7 +2,7 @@
 
 ## Functional Component
 
-```
+```ts
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
@@ -21,20 +21,26 @@ const defaultProps: DefaultProps = {
   who: 'Johny Five'
 };
 
-const Greet = ({ age, who }: RequiredProps & DefaultProps) => (
-  <p css={style.container(props)}>
-    {who} ... {age}
-  </p>
-);
+const Greet = (props: RequiredProps & DefaultProps) => {
+  const { who, age } = props;
+
+  return (
+    <p css={style.container(props)}>
+      {who} ... {age}
+    </p>
+  );
+};
 
 Greet.defaultProps = defaultProps;
 
 export default Greet;
 ```
 
+---
+
 ## Class Component
 
-```
+```ts
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
@@ -68,9 +74,11 @@ class Greet extends React.Component<RequiredProps & DefaultProps> {
 export default Greet;
 ```
 
+---
 
 ## Emotion styles
-```
+
+```ts
 // Greet.style.ts
 
 import { css } from '@emotion/core';
@@ -88,10 +96,11 @@ export default { container };
 
 ```
 
+---
 
 ## Sagas
 
-```js
+```ts
 import { Action } from 'redux-actions';
 import { call, put, takeLatest } from 'redux-saga/effects';
 
@@ -116,9 +125,11 @@ export default function* sagas() {
 
 ```
 
+---
+
 ## Testing sagas
 
-```js
+```ts
 import axios from 'axios';
 import { TestApi, testSaga } from 'redux-saga-test-plan';
 import { takeLatest } from 'redux-saga/effects';
@@ -181,7 +192,8 @@ describe('Given sagas', () => {
 ---
 
 ## Api service
-```js
+
+```ts
 import axios from 'axios';
 
 export const getStuff = (id: string) => {
@@ -191,6 +203,8 @@ export const getStuff = (id: string) => {
 };
 
 ```
+
+---
 
 ## Test API service
 
@@ -227,7 +241,7 @@ describe('Given a stuff api service', () => {
 
 ## Reducer
 
-```js
+```ts
 import { createReducer } from './createReducer';
 import { Stuff } from 'utils/types';
 
@@ -294,9 +308,11 @@ export default someReducer;
 
 ```
 
+---
+
 ## Test reducer
 
-```js
+```ts
 import * as actions from './actions';
 import reducer, { State } from './reducer';
 
@@ -388,10 +404,11 @@ describe('Given a reducer', () => {
 });
 ```
 
+---
 
 ## createReducer
 
-```js
+```ts
 export type GenericAction = { type: string; payload: any };
 
 export const createReducer = <State>(
@@ -404,4 +421,4 @@ export const createReducer = <State>(
 };
 ```
 
-
+---
