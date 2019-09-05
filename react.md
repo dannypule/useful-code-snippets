@@ -69,6 +69,23 @@ export default Greet;
 ```
 
 
+## Emotion styles
+```
+// Greet.style.ts
+
+import { css } from '@emotion/core';
+
+import { Theme } from 'src/design-system/theme';
+
+import { DefaultProps, RequiredProps } from './Greet';
+
+export const container = (props: DefaultProps & RequiredProps) => (theme: Theme) => css``;
+
+export default { container };
+
+```
+
+
 ## Sagas
 
 ```js
