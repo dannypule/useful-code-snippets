@@ -208,7 +208,7 @@ describe('Given a stuff api service', () => {
 ## Reducer
 
 ```js
-import { handleActions } from 'redux-actions';
+import { createReducer } from './createReducer';
 import { Stuff } from 'utils/types';
 
 import { getStuff } from './actions';
@@ -260,14 +260,14 @@ const getStuffFullfill = (state: State): State => ({
   }
 });
 
-const someReducer = handleActions(
+const someReducer = createReducer(
+  initialState,
   {
     [getStuff.REQUEST]: getStuffRequest,
     [getStuff.SUCCESS]: getStuffSuccess,
     [getStuff.FAILURE]: getStuffFailure,
     [getStuff.FULFILL]: getStuffFullfill
-  },
-  initialState
+  }
 );
 
 export default someReducer;
