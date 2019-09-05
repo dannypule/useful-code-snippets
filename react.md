@@ -1,5 +1,74 @@
 # React snippets
 
+## Functional Component
+
+```
+/** @jsx jsx */
+import * as React from 'react';
+import { jsx } from '@emotion/core';
+
+import styles from './Greet.styles';
+
+export interface RequiredProps {
+  age: number;
+}
+
+export interface DefaultProps {
+  who: string;
+}
+
+const defaultProps: DefaultProps = {
+  who: 'Johny Five'
+};
+
+const Greet = ({ age, who }: RequiredProps & DefaultProps) => (
+  <p>
+    {who} ... {age}
+  </p>
+);
+
+Greet.defaultProps = defaultProps;
+
+export default Greet;
+```
+
+## Class Component
+
+```
+/** @jsx jsx */
+import * as React from 'react';
+import { jsx } from '@emotion/core';
+
+import styles from './Greet.styles';
+
+export interface RequiredProps {
+  age: number;
+}
+
+export interface DefaultProps {
+  who: string;
+}
+
+class Greet extends React.Component<RequiredProps & DefaultProps> {
+  static defaultProps: DefaultProps = {
+    who: 'Johny Five'
+  };
+
+  render() {
+    const { age, who } = this.props;
+
+    return (
+      <p>
+        {who} ... {age}
+      </p>
+    );
+  }
+}
+
+export default Greet;
+```
+
+
 ## Sagas
 
 ```js
