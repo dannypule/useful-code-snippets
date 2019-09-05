@@ -58,7 +58,7 @@ class Greet extends React.Component<RequiredProps & DefaultProps> {
     const { age, who } = this.props;
 
     return (
-      <p css={style.container(props)}>
+      <p css={style.container(this.props)}>
         {who} ... {age}
       </p>
     );
@@ -79,9 +79,12 @@ import { Theme } from 'src/design-system/theme';
 
 import { DefaultProps, RequiredProps } from './Greet';
 
-export const container = (props: DefaultProps & RequiredProps) => (theme: Theme) => css``;
+const container = (props: DefaultProps & RequiredProps) => (theme: Theme) => css`
+  background-color: coral;
+`;
 
 export default { container };
+
 
 ```
 
