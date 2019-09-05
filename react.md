@@ -22,7 +22,7 @@ const defaultProps: DefaultProps = {
 };
 
 const Greet = ({ age, who }: RequiredProps & DefaultProps) => (
-  <p>
+  <p css={style.container(props)}>
     {who} ... {age}
   </p>
 );
@@ -58,7 +58,7 @@ class Greet extends React.Component<RequiredProps & DefaultProps> {
     const { age, who } = this.props;
 
     return (
-      <p>
+      <p css={style.container(props)}>
         {who} ... {age}
       </p>
     );
