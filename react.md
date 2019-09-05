@@ -7,7 +7,7 @@
 import * as React from 'react';
 import { jsx } from '@emotion/core';
 
-import styles from './Greet.styles';
+import style from './Greet.style';
 
 export interface RequiredProps {
   age: number;
@@ -39,7 +39,7 @@ export default Greet;
 import * as React from 'react';
 import { jsx } from '@emotion/core';
 
-import styles from './Greet.styles';
+import style from './Greet.style';
 
 export interface RequiredProps {
   age: number;
