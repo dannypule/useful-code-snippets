@@ -2,7 +2,7 @@
 
 ## Functional Component
 
-```ts
+```tsx
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
@@ -40,7 +40,7 @@ export default Greet;
 
 ## Class Component
 
-```ts
+```tsx
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
@@ -94,6 +94,25 @@ const container = (props: DefaultProps & RequiredProps) => (theme: Theme) => css
 export default { container };
 
 
+```
+
+---
+
+## Storybook
+
+```tsx
+// Greet.stories.tsx
+
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import Greet from './Greet';
+
+storiesOf('Greet', module)
+  .addDecorator(story => <div className="center-col width-600">{story()}</div>)
+  .add('default', () => {
+    return <Greet age={101} />;
+  });
 ```
 
 ---
