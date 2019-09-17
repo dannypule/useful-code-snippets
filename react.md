@@ -1,6 +1,7 @@
 # React snippets
 
 ## Table of contents
+
 **[Functional Component](#Functional-Component)**<br>
 **[Class Component](#Class-Component)**<br>
 **[Testing components](#Testing-components)**<br>
