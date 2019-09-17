@@ -28,19 +28,21 @@ import { jsx } from '@emotion/core';
 
 import style from './Greet.style';
 
-export interface RequiredProps {
+interface RequiredProps {
   age: number;
 }
 
-export interface DefaultProps {
+interface DefaultProps {
   who: string;
 }
+
+export type Props = RequiredProps & DefaultProps;
 
 const defaultProps: DefaultProps = {
   who: 'Johny Five'
 };
 
-const Greet = (props: RequiredProps & DefaultProps) => {
+const Greet = (props: Props) => {
   const { who, age } = props;
 
   return (
@@ -67,15 +69,17 @@ import { jsx } from '@emotion/core';
 
 import style from './Greet.style';
 
-export interface RequiredProps {
+interface RequiredProps {
   age: number;
 }
 
-export interface DefaultProps {
+interface DefaultProps {
   who: string;
 }
 
-class Greet extends React.Component<RequiredProps & DefaultProps> {
+export type Props = RequiredProps & DefaultProps;
+
+class Greet extends React.Component<Props> {
   static defaultProps: DefaultProps = {
     who: 'Johny Five'
   };
@@ -147,9 +151,9 @@ import { css } from '@emotion/core';
 
 import { Theme } from 'src/design-system/theme';
 
-import { DefaultProps, RequiredProps } from './Greet';
+import { Props } from './Greet';
 
-const container = (props: DefaultProps & RequiredProps) => (theme: Theme) => css`
+const container = (props: Props) => (theme: Theme) => css`
   background-color: coral;
 `;
 
