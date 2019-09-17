@@ -12,6 +12,9 @@
 **[Test API service](#Test-API-service)**<br>
 **[Reducer](#Reducer)**<br>
 **[Test reducer](#Class-Component)**<br>
+**[connect()](#connect())**<br>
+**[selectors](#selectors)**<br>
+**[actions](#actions)**<br>
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 
@@ -487,6 +490,64 @@ describe('Given a reducer', () => {
   });
 });
 ```
+
+---
+**[[Top](#React-Snippets)]**<br><br>
+
+## connect()
+
+```ts
+import * as selectors from './redux/selectors'
+import * as actions from './redux/actions'
+
+export const stateToProps = (state: AppState) => ({
+  cats: selectors.selectCats(state)
+});
+
+export const dispatchToProps = {
+  getCatsRequest: actions.getCats.request,
+  addCatRequest: actions.addCat.request
+};
+
+export { Greet as UnwrappedGreet };
+
+export default connect(
+  stateToProps,
+  dispatchToProps
+)(Greet);
+```
+
+---
+**[[Top](#React-Snippets)]**<br><br>
+
+## selectors
+
+```
+import { AppState } from 'src/store';
+
+export const selectCats = (state: AppState) => state.cats.data;
+```
+
+
+
+---
+**[[Top](#React-Snippets)]**<br><br>
+
+## actions
+
+```
+import { createRoutine } from 'redux-saga-routines';
+
+const PREFIX = '@CATS_PAGE';
+
+export const getCats = createRoutine(`${PREFIX}/GET_CATS`);
+
+```
+
+
+
+
+
 
 ---
 **[[Top](#React-Snippets)]**<br><br>
