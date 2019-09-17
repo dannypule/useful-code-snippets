@@ -1,7 +1,7 @@
 # React snippets
 
 ## Table of contents
-**[Functional Component](##functional-component)**<br>
+**[Functional Component](#functional-component)**<br>
 
 ## Functional Component
 
