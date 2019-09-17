@@ -76,6 +76,46 @@ export default Greet;
 
 ---
 
+## Testing components
+
+
+```tsx
+// Greet.test.tsx
+
+import * as React from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
+
+import Greet from './Greet';
+
+const initialProps = {
+  age: 42
+};
+
+const additionalProps = {
+  ...initialProps,
+  who: 'johhny woo'
+};
+
+const SUPER_GREETER = '[data-qa="super-greeter"]';
+
+describe('Given a Greet component', () => {
+  let wrapper: ShallowWrapper;
+
+  describe('when it is rendered', () => {
+    beforeEach(() => {
+      wrapper = shallow(<Greet {...initialProps} />);
+    });
+
+    it('should match the snapshot', () => {
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
+  });
+});
+
+```
+
+---
+
 ## Emotion styles
 
 ```ts
