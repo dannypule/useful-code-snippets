@@ -19,6 +19,7 @@
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 
+---
 
 ## Functional Component
 
