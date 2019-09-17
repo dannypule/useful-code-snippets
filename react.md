@@ -481,3 +481,14 @@ export const createReducer = <State>(
 ```
 
 ---
+
+## AppState type
+
+import configureStore from './configureStore';
+import rootReducer from './rootReducer';
+
+export type AppState = ReturnType<typeof rootReducer>;
+export { configureStore };
+  
+---
+  
