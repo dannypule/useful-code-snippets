@@ -8,7 +8,7 @@
 **[Storybook](#Storybook)**<br>
 **[Sagas](#Sagas)**<br>
 **[Testing sagas](#Testing-sagas)**<br>
-**[API service](#API service)**<br>
+**[API service](#API-service)**<br>
 **[Test API service](#Test-API-service)**<br>
 **[Reducer](#Reducer)**<br>
 **[Test reducer](#Class-Component)**<br>
