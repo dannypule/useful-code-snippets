@@ -92,6 +92,7 @@ export default Greet;
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Testing components
 
@@ -132,6 +133,7 @@ describe('Given a Greet component', () => {
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Emotion styles
 
@@ -154,6 +156,7 @@ export default { container };
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Storybook
 
@@ -173,6 +176,7 @@ storiesOf('Greet', module)
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Sagas
 
@@ -202,6 +206,7 @@ export default function* sagas() {
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Testing sagas
 
@@ -266,6 +271,7 @@ describe('Given sagas', () => {
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## API service
 
@@ -314,6 +320,7 @@ describe('Given a stuff api service', () => {
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Reducer
 
@@ -385,6 +392,7 @@ export default someReducer;
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Test reducer
 
@@ -481,6 +489,7 @@ describe('Given a reducer', () => {
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## createReducer
 
@@ -498,6 +507,7 @@ export const createReducer = <State>(
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## AppState type
 
