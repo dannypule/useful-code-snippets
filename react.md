@@ -155,6 +155,7 @@ import { Props } from './Greet';
 
 const container = (props: Props) => (theme: Theme) => css`
   background-color: coral;
+  margin-bottom: ${theme.margins[props.marginBottom]}px;
 `;
 
 export default { container };
