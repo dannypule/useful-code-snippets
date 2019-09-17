@@ -2,6 +2,19 @@
 
 ## Table of contents
 **[Functional Component](#Functional-Component)**<br>
+**[Class Component](#Class-Component)**<br>
+**[Testing components](#Testing components)**<br>
+**[Emotion styles](#Emotion styles)**<br>
+**[Storybook](#Storybook)**<br>
+**[Sagas](#Sagas)**<br>
+**[Testing sagas](#Testing sagas)**<br>
+**[API service](#API service)**<br>
+**[Test API service](#Test API service)**<br>
+**[Reducer](#Reducer)**<br>
+**[Test reducer](#Class-Component)**<br>
+**[createReducer](#createReducer)**<br>
+**[AppState type](#AppState type)**<br>
+
 
 ## Functional Component
 
@@ -253,7 +266,7 @@ describe('Given sagas', () => {
 
 ---
 
-## Api service
+## API service
 
 ```ts
 import axios from 'axios';
