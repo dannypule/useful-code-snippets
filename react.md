@@ -53,6 +53,7 @@ export default Greet;
 ```
 
 ---
+**[[Top](#React-Snippets)]**<br><br>
 
 ## Class Component
 
