@@ -12,7 +12,7 @@
 **[Test API service](#Test-API-service)**<br>
 **[Reducer](#Reducer)**<br>
 **[Test reducer](#Class-Component)**<br>
-**[connect()](#connect))**<br>
+**[connect()](#connect)**<br>
 **[selectors](#selectors)**<br>
 **[actions](#actions)**<br>
 **[createReducer](#createReducer)**<br>
