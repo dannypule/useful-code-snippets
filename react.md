@@ -46,9 +46,9 @@ const Greet = (props: Props) => {
   const { who, age } = props;
 
   return (
-    <p css={style.container(props)}>
+    <div css={style.container(props)}>
       {who} ... {age}
-    </p>
+    </div>
   );
 };
 
@@ -88,9 +88,9 @@ class Greet extends React.Component<Props> {
     const { age, who } = this.props;
 
     return (
-      <p css={style.container(this.props)}>
+      <div css={style.container(this.props)}>
         {who} ... {age}
-      </p>
+      </div>
     );
   }
 }
