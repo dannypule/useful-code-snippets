@@ -230,7 +230,7 @@ import { getSomething } from './actions';
 import sagas, { getSomethingRequestSaga } from './sagas';
 
 describe('Given getSomethingRequestSaga', () => {
-  const ID = 'some-id';
+  const PAYLOAD = 'some-payload';
 
   const RESPONSE = {
     data: 33
@@ -242,13 +242,13 @@ describe('Given getSomethingRequestSaga', () => {
   let saga: TestApi;
 
   beforeEach(() => {
-    saga = testSaga(getSomethingRequestSaga, getSomething.request(ID));
+    saga = testSaga(getSomethingRequestSaga, getSomething.request(PAYLOAD));
   });
 
   it('dispatches "success" then "fulfill" actions correctly', () => {
     saga
       .next()
-      .call(someService.getStuff, ID)
+      .call(someService.getStuff, PAYLOAD)
 
       .next(RESPONSE)
       .put(getSomething.success(RESPONSE.data))
@@ -340,51 +340,69 @@ import { Stuff } from 'utils/types';
 
 import { getStuff } from './actions';
 
+export interface ReducerMeta {
+  /* Total available items in API resource */
+  total?: number;
+
+  /* Sort */
+  sortBy?: string;
+  sortOrder?: string;
+
+  /* Pagination */
+  limit?: number;
+  offset?: number;
+
+  /* Search */
+  search?: string;
+}
+
 export interface State {
-  stuff: {
+    meta: ReducerMeta;
     data: Stuff[];
     loading: boolean;
     error: string;
-  };
 }
 
 const initialState: State = {
-  stuff: {
+    meta: {
+      total: 0,
+      offset: 0,
+      limit: 0,
+      sortBy: '',
+      sortOrder: '',
+      search: ''
+    },
     data: [],
-    loading: false,
+    loading: true,
     error: ''
-  }
 };
+
+export interface Payload<T> {
+  payload: { meta: ReducerMeta; items: T[] };
+}
 
 const getStuffRequest = (state: State): State => ({
   ...state,
-  stuff: {
-    ...state.stuff,
-    loading: true
-  }
+  loading: true
 });
 
-const getStuffSuccess = (state: State, { payload }: { payload: Stuff[] }): State => ({
+const getStuffSuccess = (state: State, { payload: { meta, items } }: Payload<Application>): State => ({
   ...state,
-  stuff: {
-    ...state.stuff,
-    data: payload
-  }
+  meta: {
+    ...state.meta,
+    ...meta
+  },
+  data: items
 });
 
 const getStuffFailure = (state: State): State => ({
-  stuff: {
-    ...state.stuff,
+  ...state,
     error: 'TBC'
-  }
 });
 
 const getStuffFullfill = (state: State): State => ({
   ...state,
-  stuff: {
-    ...state.stuff,
-    loading: false
-  }
+  loading: false
 });
 
 const someReducer = createReducer(
@@ -438,16 +456,16 @@ describe('Given a reducer', () => {
       it('should return the correct state', () => {
         expect(state).toStrictEqual({
           ...state,
-          stuff: {
-            ...state.stuff,
-            loading: true
-          }
+          loading: true
         });
       });
     });
 
     describe('and getStuff.SUCCESS action is received', () => {
-      const mockSubs = ['some', 'subs'];
+      const mockResponse = {
+        items: ['some', 'subs'],
+        meta: REDUCER_META_MOCK
+      };
       beforeEach(() => {
         state = reducer(state, actions.getStuff.success(mockSubs));
       });
@@ -455,10 +473,8 @@ describe('Given a reducer', () => {
       it('should return the correct state', () => {
         expect(state).toStrictEqual({
           ...state,
-          stuff: {
-            ...state.stuff,
-            data: mockSubs
-          }
+          data: mockResponse.items,
+          meta: mockResponse.meta
         });
       });
     });
@@ -471,10 +487,7 @@ describe('Given a reducer', () => {
       it('should return the correct state', () => {
         expect(state).toStrictEqual({
           ...state,
-          stuff: {
-            ...state.stuff,
-            error: 'TBC'
-          }
+          error: 'TBC'
         });
       });
     });
@@ -487,10 +500,7 @@ describe('Given a reducer', () => {
       it('should return the correct state', () => {
         expect(state).toStrictEqual({
           ...state,
-          stuff: {
-            ...state.stuff,
-            loading: false
-          }
+          loading: false
         });
       });
     });
