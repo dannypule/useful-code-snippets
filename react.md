@@ -543,6 +543,9 @@ export default connect(
 import { AppState } from 'src/store';
 
 export const selectCats = (state: AppState) => state.cats.data;
+export const selectMeta = (state: AppState) => state.cats.meta;
+export const selectLoading = (state: AppState) => state.cats.loading;
+export const selectError = (state: AppState) => state.cats.error;
 ```
 
 
