@@ -209,7 +209,7 @@ export function* getSomethingRequestSaga({ payload }: Action<string>) {
   }
 }
 
-export default function* sagas() {
+export function* somethingSagas() {
   yield takeLatest(getSomething.REQUEST, getSomethingRequestSaga);
 }
 
@@ -227,7 +227,7 @@ import { takeLatest } from 'redux-saga/effects';
 
 import * as someService from '../../../../../api_services/some/service';
 import { getSomething } from './actions';
-import sagas, { getSomethingRequestSaga } from './sagas';
+import { getSomethingRequestSaga, somethingSagas } from './sagas';
 
 describe('Given getSomethingRequestSaga', () => {
   const PAYLOAD = 'some-payload';
@@ -270,8 +270,8 @@ describe('Given getSomethingRequestSaga', () => {
   });
 });
 
-describe('Given sagas', () => {
-  const sagasTest = sagas();
+describe('Given somethingSagas', () => {
+  const sagasTest = somethingSagas();
 
   it('should take getSomething.REQUEST', () => {
     expect(sagasTest.next().value).toStrictEqual(takeLatest(getSomething.REQUEST, getSomethingRequestSaga));
