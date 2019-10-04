@@ -313,10 +313,26 @@ describe('Given thingsSaga', () => {
 ```ts
 import axios from 'axios';
 
-export const getStuff = (id: string) => {
-  const url = `/api/things/${id}/stuff`;
+const getThings = async ({ orgId, params }: { orgId: string; params?: Params }) => {
+  const url = `/api/things`;
 
-  return axios.get(url);
+  const response: { total: number; items: Things[] } = await axios.get(url, {
+    params
+  });
+  const { total, items } = response;
+
+  const output: {
+    meta: ReducerMeta;
+    items: Things[];
+  } = {
+    meta: {
+      total,
+      ...params
+    },
+    items
+  };
+
+  return output;
 };
 
 ```
