@@ -202,7 +202,7 @@ const GET_THINGS_SUCCESS = `${PREFIX}/GET_THINGS_SUCCESS`;
 const GET_THINGS_ERROR = `${PREFIX}/GET_THINGS_ERROR`;
 
 export const getThings = {
-  next: createActionCreator(GET_THINGS, resolve => ({ orgId, params }: { orgId: string; params: Params }) =>
+  request: createActionCreator(GET_THINGS, resolve => ({ orgId, params }: { orgId: string; params: Params }) =>
     resolve({ orgId, params })
   ),
   success: createActionCreator(GET_THINGS_SUCCESS, resolve => (data: GetThingsData) => resolve(data)),
@@ -223,7 +223,7 @@ import * as apiService from 'src/api_services/things/service';
 
 import { getThings } from './actions';
 
-export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.next>) {
+export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.request>) {
   try {
     const res: apiService.GetAppCategoriesResponse = yield call(apiService.getThings, payload);
     yield put(getThings.success(res));
@@ -233,7 +233,7 @@ export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.n
 }
 
 export function* thingsSaga() {
-  yield takeLatest(getType(getThings.next), getThingsRequestSaga);
+  yield takeLatest(getType(getThings.request), getThingsRequestSaga);
 }
 ```
 
@@ -272,7 +272,7 @@ describe('Given getThingsRequestSaga', () => {
   let sagaTest: TestApi;
 
   beforeEach(() => {
-    sagaTest = testSaga(getThingsRequestSaga as SagaType, getThings.next(PAYLOAD));
+    sagaTest = testSaga(getThingsRequestSaga as SagaType, getThings.request(PAYLOAD));
   });
 
   it('dispatches "success" actions correctly', () => {
@@ -299,7 +299,7 @@ describe('Given thingsSaga', () => {
   const sagasTest = thingsSaga();
 
   it('should take getThings.REQUEST', () => {
-    expect(sagasTest.next().value).toStrictEqual(takeLatest(getType(getThings.next), getThingsRequestSaga));
+    expect(sagasTest.next().value).toStrictEqual(takeLatest(getType(getThings.request), getThingsRequestSaga));
   });
 });
 
@@ -402,7 +402,7 @@ export const initialState: State = {
 };
 
 export const thingsReducer = createReducer(initialState, handleAction => [
-  handleAction(actions.getThings.next, state => ({
+  handleAction(actions.getThings.request, state => ({
     ...state,
     loading: true
   })),
@@ -441,7 +441,7 @@ describe('Given thingsReducer', () => {
 
   describe('when it is initiated', () => {
     beforeEach(() => {
-      state = thingsReducer(undefined, { type: 'FAKE_ACTION', payload: new Error('some error'), error: true });
+      state = thingsReducer(undefined, { type: '@@INIT' } as any);
     });
 
     it('should return the default state', () => {
@@ -449,13 +449,13 @@ describe('Given thingsReducer', () => {
     });
   });
 
-  describe('and getThings.next action is received', () => {
+  describe('and getThings.request action is received', () => {
     const mock = {
       orgId: 'id',
       params: {}
     };
     beforeEach(() => {
-      state = thingsReducer(state, actions.getThings.next(mock));
+      state = thingsReducer(state, actions.getThings.request(mock));
     });
 
     it('should return the correct state', () => {
