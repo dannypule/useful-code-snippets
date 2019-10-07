@@ -225,7 +225,7 @@ import { getThings } from './actions';
 
 export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.next>) {
   try {
-    const res = yield call(apiService.getThings, payload);
+    const res: apiService.GetAppCategoriesResponse = yield call(apiService.getThings, payload);
     yield put(getThings.success(res));
   } catch (error) {
     yield put(getThings.error(error));
@@ -245,7 +245,7 @@ export function* thingsSaga() {
 ```ts
 import axios from 'axios';
 import { getType } from 'deox';
-import { TestApi, testSaga } from 'redux-saga-test-plan';
+import { SagaType, TestApi, testSaga } from 'redux-saga-test-plan';
 import { takeLatest } from 'redux-saga/effects';
 
 import * as apiService from 'src/api_services/things/service';
@@ -272,7 +272,7 @@ describe('Given getThingsRequestSaga', () => {
   let sagaTest: TestApi;
 
   beforeEach(() => {
-    sagaTest = testSaga(getThingsRequestSaga, getThings.next(PAYLOAD));
+    sagaTest = testSaga(getThingsRequestSaga as SagaType, getThings.next(PAYLOAD));
   });
 
   it('dispatches "success" actions correctly', () => {
@@ -313,7 +313,13 @@ describe('Given thingsSaga', () => {
 ```ts
 import axios from 'axios';
 
-const getThings = async ({ orgId, params }: { orgId: string; params?: Params }) => {
+export interface GetThingsResponse {
+  meta: ReducerMeta;
+  items: Things[];
+}
+
+
+const getThings = async ({ orgId, params }: { orgId: string; params?: Params }): Promise<GetThingsResponse> => {
   const url = `/api/things`;
 
   const response: { total: number; items: Things[] } = await axios.get(url, {
