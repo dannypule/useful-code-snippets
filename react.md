@@ -136,6 +136,10 @@ describe('Given a Greet component', () => {
     it('Then should match the snapshot', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
     });
+    
+    it('Then should render the correct greeter', () => {
+      expect(wrapper.find(SUPER_GREETER)).toExist();
+    });
   });
 });
 
