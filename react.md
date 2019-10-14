@@ -114,12 +114,12 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import Greet from './Greet';
 
-const initialProps = {
+const props = {
   age: 42
 };
 
 const additionalProps = {
-  ...initialProps,
+  ...props,
   who: 'johhny woo'
 };
 
@@ -130,7 +130,7 @@ describe('Given a Greet component', () => {
 
   describe('when it is rendered', () => {
     beforeEach(() => {
-      wrapper = shallow(<Greet {...initialProps} />);
+      wrapper = shallow(<Greet {...props} />);
     });
 
     it('should match the snapshot', () => {
