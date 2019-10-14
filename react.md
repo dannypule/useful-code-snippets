@@ -128,12 +128,12 @@ const SUPER_GREETER = '[data-qa="super-greeter"]';
 describe('Given a Greet component', () => {
   let wrapper: ShallowWrapper;
 
-  describe('when it is rendered', () => {
+  describe('When it is rendered', () => {
     beforeEach(() => {
       wrapper = shallow(<Greet {...props} />);
     });
 
-    it('should match the snapshot', () => {
+    it('Then should match the snapshot', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
     });
   });
