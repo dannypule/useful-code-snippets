@@ -164,7 +164,7 @@ const container = (props: Props) => (theme: Theme) => css`
   margin-bottom: ${theme.margins[props.marginBottom]}px;
 `;
 
-export default { container };
+export const style = { container };
 
 
 ```
