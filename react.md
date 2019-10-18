@@ -24,39 +24,38 @@
 ## Functional Component
 
 ```tsx
+// Greet.tsx
+
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
 
+import { Margins } from 'src/design-system/style-types';
+
 import { style } from './Greet.style';
 
-interface RequiredProps {
-  age: number;
-}
+interface RequiredProps {}
 
 interface DefaultProps {
-  who: string;
+  marginBottom: Margins;
 }
 
 export type Props = RequiredProps & DefaultProps;
 
 const defaultProps: DefaultProps = {
-  who: 'Johny Five'
+  marginBottom: '0'
 };
 
 const Greet = (props: Props) => {
-  const { who, age } = props;
+  const { marginBottom } = props;
 
-  return (
-    <div css={style.container(props)}>
-      {who} ... {age}
-    </div>
-  );
+  return <div css={style.container(props)}>yo</div>;
 };
 
 Greet.defaultProps = defaultProps;
 
 export default Greet;
+
 ```
 
 ---
@@ -65,39 +64,38 @@ export default Greet;
 ## Class Component
 
 ```tsx
+// Greet.tsx
+
 /** @jsx jsx */
 import * as React from 'react';
 import { jsx } from '@emotion/core';
 
+import { Margins } from 'src/design-system/style-types';
+
 import { style } from './Greet.style';
 
-interface RequiredProps {
-  age: number;
-}
+interface RequiredProps {}
 
 interface DefaultProps {
-  who: string;
+  marginBottom: Margins;
 }
 
 export type Props = RequiredProps & DefaultProps;
 
 class Greet extends React.Component<Props> {
   static defaultProps: DefaultProps = {
-    who: 'Johny Five'
+    marginBottom: '0'
   };
 
   render() {
-    const { age, who } = this.props;
+    const { marginBottom } = this.props;
 
-    return (
-      <div css={style.container(this.props)}>
-        {who} ... {age}
-      </div>
-    );
+    return <div css={style.container(this.props)}>yo</div>;
   }
 }
 
 export default Greet;
+
 ```
 
 ---
@@ -115,15 +113,10 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Greet from './Greet';
 
 const props = {
-  age: 42
+  marginBottom: '0'
 };
 
-const additionalProps = {
-  ...props,
-  who: 'johhny woo'
-};
-
-const SUPER_GREETER = '[data-qa="super-greeter"]';
+const CONTINUE_BUTTON = '[data-qa="continue-button"]';
 
 describe('Given a Greet component', () => {
   let wrapper: ShallowWrapper;
@@ -135,10 +128,6 @@ describe('Given a Greet component', () => {
 
     it('Then should match the snapshot', () => {
       expect(wrapper.getElement()).toMatchSnapshot();
-    });
-    
-    it('Then should render the correct greeter', () => {
-      expect(wrapper.find(SUPER_GREETER)).toExist();
     });
   });
 });
@@ -166,7 +155,6 @@ const container = (props: Props) => (theme: Theme) => css`
 
 export const style = { container };
 
-
 ```
 
 ---
@@ -175,6 +163,7 @@ export const style = { container };
 ## Storybook
 
 ```tsx
+
 // Greet.stories.tsx
 
 import * as React from 'react';
@@ -185,8 +174,10 @@ import Greet from './Greet';
 storiesOf('Greet', module)
   .addDecorator(story => <div className="center-col width-600">{story()}</div>)
   .add('default', () => {
-    return <Greet age={101} />;
+    return <Greet />;
   });
+
+  
 ```
 
 ---
