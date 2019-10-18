@@ -110,9 +110,9 @@ export default Greet;
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Greet from './Greet';
+import Greet, { Props } from './Greet';
 
-const props = {
+const props: Partial<Props> = {
   marginBottom: '0'
 };
 
@@ -131,6 +131,7 @@ describe('Given a Greet component', () => {
     });
   });
 });
+
 
 ```
 
