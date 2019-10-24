@@ -82,7 +82,16 @@ interface DefaultProps {
 
 export type Props = RequiredProps & DefaultProps;
 
+
+interface State {
+  showResults: boolean;
+}
+
 class Greet extends React.Component<Props> {
+  state = {
+    showResults: false
+  };
+  
   static defaultProps: DefaultProps = {
     marginBottom: '0'
   };
