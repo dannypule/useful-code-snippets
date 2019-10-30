@@ -11,9 +11,9 @@
 **[Sagas](#Sagas)**<br>
 **[Testing sagas](#Testing-sagas)**<br>
 **[API service](#API-service)**<br>
-**[Test API service](#Test-API-service)**<br>
+**[API service - tests](#API-service-tests)**<br>
 **[Reducer](#Reducer)**<br>
-**[Test reducer](#Test-reducer)**<br>
+**[Reducer - tests](#Test-reducer)**<br>
 **[connect()](#connect)**<br>
 **[selectors](#selectors)**<br>
 **[createReducer](#createReducer)**<br>
@@ -350,7 +350,7 @@ const getThings = async ({ orgId, params }: { orgId: string; params?: Params }):
 
 ---
 
-## Test API service
+## API service - tests
 
 ```js
 import axios from 'axios';
