@@ -11,7 +11,7 @@
 **[Sagas](#Sagas)**<br>
 **[Testing sagas](#Testing-sagas)**<br>
 **[API service](#API-service)**<br>
-**[API service - tests](#API-service-tests)**<br>
+**[API service - tests](#API-service---tests)**<br>
 **[Reducer](#Reducer)**<br>
 **[Reducer - tests](#Test-reducer)**<br>
 **[connect()](#connect)**<br>
