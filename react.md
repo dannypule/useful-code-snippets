@@ -576,4 +576,23 @@ export type AppState = ReturnType<typeof rootReducer>;
 export { configureStore };
   
 ---
+**[[Top](#React-Snippets)]**<br><br> 
   
+  
+export const mapStateToProps = (state: AppState) => ({
+  thing: selectors.selectThing(state),
+});
+
+export const mapDispatchToProps = {
+  getStuff: actions.getStuff.request,
+};
+
+export { MyComponent as UnwrappedMyComponent };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MyComponent);
+
+---
+**[[Top](#React-Snippets)]**<br><br> 
