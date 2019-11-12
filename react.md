@@ -18,6 +18,7 @@
 **[selectors](#selectors)**<br>
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
+**[redux connect](#redux-connect)**<br>
 
 ---
 
@@ -195,7 +196,7 @@ storiesOf('Greet', module)
 
 ## Actions
 
-```
+```ts
 import { createActionCreator } from 'deox';
 
 import { GetThingsData } from 'src/api_services/apps/types';
@@ -352,7 +353,7 @@ const getThings = async ({ orgId, params }: { orgId: string; params?: Params }):
 
 ## API service - tests
 
-```js
+```ts
 import axios from 'axios';
 
 import * as service from './service';
@@ -537,7 +538,7 @@ export default connect(
 
 ## selectors
 
-```
+```ts
 import { AppState } from 'src/store';
 
 export const selectCats = (state: AppState) => state.cats.data;
@@ -569,16 +570,22 @@ export const createReducer = <State>(
 
 ## AppState type
 
+```ts
 import configureStore from './configureStore';
 import rootReducer from './rootReducer';
 
 export type AppState = ReturnType<typeof rootReducer>;
 export { configureStore };
+```
   
 ---
+
 **[[Top](#React-Snippets)]**<br><br> 
   
   
+## redux connect
+
+```tsx
 export const mapStateToProps = (state: AppState) => ({
   thing: selectors.selectThing(state),
 });
@@ -593,6 +600,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(MyComponent);
+```
 
 ---
 **[[Top](#React-Snippets)]**<br><br> 
