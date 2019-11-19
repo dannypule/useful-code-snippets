@@ -122,7 +122,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import Greet, { Props } from './Greet';
 
-const props: Partial<Props> = {
+const props = {
   marginBottom: '0'
 };
 
