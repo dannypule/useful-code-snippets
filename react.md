@@ -120,10 +120,10 @@ export default Greet;
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Greet, { Props } from './Greet';
+import Greet from './Greet';
 
 const props = {
-  marginBottom: '0'
+  marginBottom: '0' as any
 };
 
 const CONTINUE_BUTTON = '[data-qa="continue-button"]';
