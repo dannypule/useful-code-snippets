@@ -174,7 +174,6 @@ export const style = { container };
 ## Storybook
 
 ```tsx
-
 // Greet.stories.tsx
 
 import * as React from 'react';
@@ -186,9 +185,14 @@ storiesOf('Greet', module)
   .addDecorator(story => <div className="center-col width-600">{story()}</div>)
   .add('default', () => {
     return <Greet />;
-  });
+  })
+  .add('interactive', () =>
+    React.createElement(() => {
+      const [value, setValue] = React.useState('');
 
-  
+      return <Greet />;
+    })
+  );
 ```
 
 ---
