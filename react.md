@@ -446,7 +446,10 @@ describe('Given someReducer', () => {
     it('Then the correct state should be returned', () => {
       state = someReducer(state, someActions.request());
 
-      expect(state).toStrictEqual();
+      expect(state).toStrictEqual({
+        ...state,
+        loading: true
+      });
     });
   });
 });
