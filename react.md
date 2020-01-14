@@ -19,6 +19,8 @@
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 **[redux connect](#redux-connect)**<br>
+**[index.ts](#index.ts)**<br>
+
 
 ---
 
@@ -552,3 +554,16 @@ export default connect(
 
 ---
 **[[Top](#React-Snippets)]**<br><br> 
+
+## index.ts
+
+```ts
+import MyComponent from './MyComponent';
+
+export default MyComponent;
+```
+
+---
+
+**[[Top](#React-Snippets)]**<br><br> 
+
