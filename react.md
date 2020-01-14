@@ -439,73 +439,14 @@ export const thingsReducer = createReducer(initialState, handleAction => [
 ## Test reducer
 
 ```ts
-import { REDUCER_META_MOCK } from 'src/mocks/_common/reducer-meta.mock';
-import { thingsMock10 } from 'src/mocks/things/things.mock';
-
-import * as actions from './actions';
-import { thingsReducer, initialState } from './reducer';
-import { State } from './types';
-
-describe('Given thingsReducer', () => {
+describe('Given someReducer', () => {
   let state: State;
 
-  describe('when it is initiated', () => {
-    beforeEach(() => {
-      state = thingsReducer(undefined, { type: '@@INIT' } as any);
-    });
+  describe('When someActions.request action is received', () => {
+    it('Then the correct state should be returned', () => {
+      state = someReducer(state, someActions.request());
 
-    it('should return the default state', () => {
-      expect(state).toStrictEqual(initialState);
-    });
-  });
-
-  describe('and getThings.request action is received', () => {
-    const mock = {
-      orgId: 'id',
-      params: {}
-    };
-    beforeEach(() => {
-      state = thingsReducer(state, actions.getThings.request(mock));
-    });
-
-    it('should return the correct state', () => {
-      expect(state).toStrictEqual({
-        ...state,
-        loading: true
-      });
-    });
-  });
-
-  describe('and getThings.success action is received', () => {
-    const mockResponse = {
-      items: thingsMock10,
-      meta: REDUCER_META_MOCK
-    };
-    beforeEach(() => {
-      state = thingsReducer(state, actions.getThings.success(mockResponse));
-    });
-
-    it('should return the correct state', () => {
-      expect(state).toStrictEqual({
-        ...state,
-        data: mockResponse.items,
-        meta: mockResponse.meta,
-        loading: false
-      });
-    });
-  });
-
-  describe('and getThings.error action is received', () => {
-    beforeEach(() => {
-      state = thingsReducer(state, actions.getThings.error(new Error('some error')));
-    });
-
-    it('should return the correct state', () => {
-      expect(state).toStrictEqual({
-        ...state,
-        error: 'TBC',
-        loading: false
-      });
+      expect(state).toStrictEqual();
     });
   });
 });
