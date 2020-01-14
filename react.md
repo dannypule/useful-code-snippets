@@ -90,7 +90,7 @@ interface State {
   showResults: boolean;
 }
 
-class Greet extends React.Component<Props> {
+class Greet extends React.Component<Props, State> {
   state = {
     showResults: false
   };
