@@ -19,7 +19,7 @@
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 **[redux connect](#redux-connect)**<br>
-**[index](#index.ts)**<br>
+**[index](#index)**<br>
 
 
 ---
