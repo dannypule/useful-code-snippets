@@ -19,7 +19,7 @@
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 **[redux connect](#redux-connect)**<br>
-**[index.ts](#index.ts)**<br>
+**[index](#index.ts)**<br>
 
 
 ---
@@ -555,7 +555,7 @@ export default connect(
 ---
 **[[Top](#React-Snippets)]**<br><br> 
 
-## index.ts
+## index
 
 ```ts
 import MyComponent from './MyComponent';
