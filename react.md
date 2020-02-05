@@ -46,13 +46,14 @@ interface DefaultProps {
 export type Props = RequiredProps & DefaultProps;
 
 const defaultProps: DefaultProps = {
-  marginBottom: '0'
+  marginBottom: '0',
+  className: ''
 };
 
 const Greet = (props: Props) => {
-  const { marginBottom } = props;
+  const { marginBottom, className } = props;
 
-  return <div css={style.container(props)}>yo</div>;
+  return <div className={className} css={style.container(props)}>yo</div>;
 };
 
 Greet.defaultProps = defaultProps;
@@ -96,13 +97,14 @@ class Greet extends React.Component<Props, State> {
   };
   
   static defaultProps: DefaultProps = {
-    marginBottom: '0'
+    marginBottom: '0',
+    className: ''
   };
 
   render() {
-    const { marginBottom } = this.props;
+    const { marginBottom, className } = this.props;
 
-    return <div css={style.container(this.props)}>yo</div>;
+    return <div className={className} css={style.container(this.props)}>yo</div>;
   }
 }
 
