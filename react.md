@@ -113,6 +113,18 @@ export class Greet extends React.Component<Props, State> {
 ---
 **[[Top](#React-Snippets)]**<br><br>
 
+
+## index
+
+```ts
+export { Greet } from './Greet';
+```
+
+---
+
+**[[Top](#React-Snippets)]**<br><br> 
+
+
 ## Testing components
 
 
@@ -555,15 +567,5 @@ export default connect(
 ---
 **[[Top](#React-Snippets)]**<br><br> 
 
-## index
 
-```ts
-import MyComponent from './MyComponent';
-
-export default MyComponent;
-```
-
----
-
-**[[Top](#React-Snippets)]**<br><br> 
 
