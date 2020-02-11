@@ -41,6 +41,7 @@ interface RequiredProps {}
 
 interface DefaultProps {
   marginBottom: Margins;
+  className: string;
 }
 
 export type Props = RequiredProps & DefaultProps;
@@ -82,6 +83,7 @@ interface RequiredProps {}
 
 interface DefaultProps {
   marginBottom: Margins;
+  className: string;
 }
 
 export type Props = RequiredProps & DefaultProps;
