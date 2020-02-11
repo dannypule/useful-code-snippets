@@ -51,15 +51,13 @@ const defaultProps: DefaultProps = {
   className: ''
 };
 
-const Greet = (props: Props) => {
-  const { marginBottom, className } = props;
+export const Greet = (props: Props) => {
+  const { className } = props;
 
   return <div className={className} css={style.container(props)}>yo</div>;
 };
 
 Greet.defaultProps = defaultProps;
-
-export default Greet;
 
 ```
 
@@ -93,7 +91,7 @@ interface State {
   showResults: boolean;
 }
 
-class Greet extends React.Component<Props, State> {
+export class Greet extends React.Component<Props, State> {
   state = {
     showResults: false
   };
@@ -104,13 +102,11 @@ class Greet extends React.Component<Props, State> {
   };
 
   render() {
-    const { marginBottom, className } = this.props;
+    const { className } = this.props;
 
     return <div className={className} css={style.container(this.props)}>yo</div>;
   }
 }
-
-export default Greet;
 
 ```
 
@@ -126,7 +122,7 @@ export default Greet;
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Greet from './Greet';
+import { Greet } from './Greet';
 
 const props = {
   marginBottom: '0' as any
@@ -185,7 +181,7 @@ export const style = { container };
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Greet from './Greet';
+import { Greet } from './Greet';
 
 storiesOf('Greet', module)
   .addDecorator(story => <div className="center-col width-600">{story()}</div>)
