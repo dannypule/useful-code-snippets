@@ -4,6 +4,7 @@
 
 **[Functional Component](#Functional-Component)**<br>
 **[Class Component](#Class-Component)**<br>
+**[index](#index)**<br>
 **[Testing components](#Testing-components)**<br>
 **[Emotion styles](#Emotion-styles)**<br>
 **[Storybook](#Storybook)**<br>
@@ -19,7 +20,6 @@
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
 **[redux connect](#redux-connect)**<br>
-**[index](#index)**<br>
 
 
 ---
