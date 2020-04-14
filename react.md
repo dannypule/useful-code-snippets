@@ -152,7 +152,7 @@ describe('Given a Greet component', () => {
       wrapper = shallow(<Greet {...props} />);
     });
 
-    it('Then should match the snapshot', () => {
+    it('Then getCatsRequest should be called', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
   });
