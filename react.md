@@ -136,8 +136,10 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import { Greet } from './Greet';
 
+const getCatsRequest = jest.fn() as any;
+
 const props = {
-  marginBottom: '0' as any
+  getCatsRequest
 };
 
 const CONTINUE_BUTTON = '[data-qa="continue-button"]';
@@ -151,7 +153,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then should match the snapshot', () => {
-      expect(wrapper.getElement()).toMatchSnapshot();
+      expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
   });
 });
