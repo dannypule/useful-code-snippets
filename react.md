@@ -142,7 +142,7 @@ const props = {
   getCatsRequest
 };
 
-const CONTINUE_BUTTON = '[data-qa="continue-button"]';
+const CATS = '[data-qa="cats" ]';
 
 describe('Given a Greet component', () => {
   let wrapper: ShallowWrapper;
@@ -154,6 +154,10 @@ describe('Given a Greet component', () => {
 
     it('Then getCatsRequest should be called', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
+    });
+    
+    it('Then CATS should NOT exist', () => {
+      expect(wrapper.find(CATS)).not.toExist();
     });
   });
 });
