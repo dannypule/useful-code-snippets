@@ -142,7 +142,7 @@ const props = {
   getCatsRequest
 };
 
-const CATS = '[data-qa="cats" ]';
+const CATS = '[data-qa="cats"]';
 
 describe('Given a Greet component', () => {
   let wrapper: ShallowWrapper;
