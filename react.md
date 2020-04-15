@@ -134,11 +134,11 @@ export { Greet } from './Greet';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { Greet } from './Greet';
+import { Greet, Props } from './Greet';
 
 const getCatsRequest = jest.fn() as any;
 
-const props = {
+const props: Props = {
   getCatsRequest
 };
 
