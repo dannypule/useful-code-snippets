@@ -30,7 +30,7 @@
 // Greet.tsx
 
 /** @jsx jsx */
-import * as React from 'react';
+import React from 'react';
 import { jsx } from '@emotion/core';
 
 import { Margins } from 'src/design-system/style-types';
