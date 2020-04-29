@@ -5,7 +5,8 @@
 **[Functional Component](#Functional-Component)**<br>
 **[Class Component](#Class-Component)**<br>
 **[index](#index)**<br>
-**[Testing components](#Testing-components)**<br>
+**[Testing components - shallow](#Testing-components---shallow)**<br>
+**[Testing components - mount](#Testing-components---shallow)**<br>
 **[Emotion styles](#Emotion-styles)**<br>
 **[Storybook](#Storybook)**<br>
 **[Actions](#Actions)**<br>
@@ -125,7 +126,7 @@ export { Greet } from './Greet';
 **[[Top](#React-Snippets)]**<br><br> 
 
 
-## Testing components
+## Testing components - shallow
 
 
 ```tsx
@@ -161,6 +162,57 @@ describe('Given a Greet component', () => {
     });
   });
 });
+
+
+```
+
+---
+**[[Top](#React-Snippets)]**<br><br>
+
+
+## Testing components - mount
+
+
+```tsx
+// Greet.test.tsx
+
+import * as React from 'react';
+import { mount, ReactWrapper } from 'enzyme';
+
+import { TestApp } from 'src/utils/test-utils';
+
+import { Greet, Props } from './Greet';
+
+const getCatsRequest = jest.fn() as any;
+
+const props: Props = {
+  getCatsRequest,
+};
+
+const CATS = '[data-qa="cats"]';
+
+describe('Given a Greet component', () => {
+  let wrapper: ReactWrapper;
+
+  describe('When it is rendered', () => {
+    beforeEach(() => {
+      wrapper = mount(
+        <TestApp>
+          <Greet {...props} />
+        </TestApp>
+      );
+    });
+
+    it('Then getCatsRequest should be called', () => {
+      expect(getCatsRequest).toHaveBeenCalledWith(42);
+    });
+
+    it('Then CATS should NOT exist', () => {
+      expect(wrapper.find(CATS)).not.toExist();
+    });
+  });
+});
+
 
 
 ```
