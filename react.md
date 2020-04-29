@@ -6,7 +6,7 @@
 **[Class Component](#Class-Component)**<br>
 **[index](#index)**<br>
 **[Testing components - shallow](#Testing-components---shallow)**<br>
-**[Testing components - mount](#Testing-components---shallow)**<br>
+**[Testing components - mount](#Testing-components---mount)**<br>
 **[Emotion styles](#Emotion-styles)**<br>
 **[Storybook](#Storybook)**<br>
 **[Actions](#Actions)**<br>
