@@ -143,7 +143,9 @@ const props: Props = {
   getCatsRequest
 };
 
-const CATS = '[data-qa="cats"]';
+const qa = {
+  uploadCatButton: '[data-qa="uploadCatButton"]' 
+}
 
 describe('Given a Greet component', () => {
   let wrapper: ShallowWrapper;
@@ -157,8 +159,8 @@ describe('Given a Greet component', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
     
-    it('Then CATS should NOT exist', () => {
-      expect(wrapper.find(CATS)).not.toExist();
+    it('Then qa.uploadCatButton should NOT exist', () => {
+      expect(wrapper.find(qa.uploadCatButton)).not.toExist();
     });
   });
 });
@@ -189,7 +191,9 @@ const props: Props = {
   getCatsRequest,
 };
 
-const CATS = '[data-qa="cats"]';
+const qa = {
+  uploadCatButton: '[data-qa="uploadCatButton"]' 
+}
 
 describe('Given a Greet component', () => {
   let wrapper: ReactWrapper;
@@ -207,8 +211,8 @@ describe('Given a Greet component', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
 
-    it('Then CATS should NOT exist', () => {
-      expect(wrapper.find(CATS)).not.toExist();
+    it('Then qa.uploadCatButton should NOT exist', () => {
+      expect(wrapper.find(qa.uploadCatButton)).not.toExist();
     });
   });
 });
