@@ -71,7 +71,7 @@ Greet.defaultProps = defaultProps;
 // Greet.tsx
 
 /** @jsx jsx */
-import * as React from 'react';
+import React from 'react';
 import { jsx } from '@emotion/core';
 
 import { Margins } from 'src/design-system/style-types';
@@ -132,7 +132,7 @@ export { Greet } from './Greet';
 ```tsx
 // Greet.test.tsx
 
-import * as React from 'react';
+import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 import { Greet, Props } from './Greet';
@@ -178,7 +178,7 @@ describe('Given a Greet component', () => {
 ```tsx
 // Greet.test.tsx
 
-import * as React from 'react';
+import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
 import { TestApp } from 'src/utils/test-utils';
