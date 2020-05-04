@@ -152,6 +152,8 @@ describe('Given a Greet component', () => {
 
   describe('When it is rendered', () => {
     beforeEach(() => {
+      jest.clearAllMocks();
+      
       wrapper = shallow(<Greet {...props} />);
     });
 
@@ -200,6 +202,8 @@ describe('Given a Greet component', () => {
 
   describe('When it is rendered', () => {
     beforeEach(() => {
+      jest.clearAllMocks();
+      
       wrapper = mount(
         <TestApp>
           <Greet {...props} />
