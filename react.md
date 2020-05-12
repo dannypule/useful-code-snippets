@@ -137,10 +137,10 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import { Greet, Props } from './Greet';
 
-const getCatsRequest = jest.fn() as any;
+const getCatsRequest = jest.fn();
 
 const props: Props = {
-  getCatsRequest
+  getCatsRequest: getCatsRequest as any
 };
 
 const qa = {
