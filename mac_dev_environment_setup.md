@@ -39,7 +39,9 @@ Preferences -> Profiles -> Reuse previous sessions directory
 
 If a warning appears on zsh mount (Insecure completion-dependent directories detected), refer to this https://stackoverflow.com/questions/50499750/when-i-update-oh-my-zsh-i-got-a-error-how-do-i-fix-it 
 
-### NVM - Node Version Manager `brew install nvm`
+### NVM - Node Version Manager 
+
+`brew install nvm`
 
 You should create NVM's working directory if it doesn't exist:
 
@@ -63,8 +65,8 @@ If you get a permissions error when installing nvm, fix permissions using:
 or last option would be:
 `git clone http://github.com/creationix/nvm.git .nvm`
 
-### Node/npm via nvm
-(first restart iTerm2)
+### Setup node and npm using nvm
+(first restart iTerm2 after installing nvm)
 `nvm install 8.9.4` install specific version or `nvm install --lts`
 `nvm use 8.9.4` or `nvm use --lts`
 
