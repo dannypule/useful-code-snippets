@@ -121,9 +121,13 @@ source ~/.nvm/nvm.sh
 ### switch from apple git to updated git
 
 `git --version`
+
 `which git`
+
 `sudo mv /usr/bin/git /usr/bin/git-apple`
+
 `brew install git`
+
 `which git` (should now be /usr/local/bin/git)
 
 ### signing into github using two factor auth via the cmd line
