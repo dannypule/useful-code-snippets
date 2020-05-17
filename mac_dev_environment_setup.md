@@ -37,6 +37,8 @@ Preferences -> Profiles -> Reuse previous sessions directory
 
 ### [Oh My Zsh](http://ohmyz.sh/)
 
+If a warning appears on zsh mount (Insecure completion-dependent directories detected), refer to this https://stackoverflow.com/questions/50499750/when-i-update-oh-my-zsh-i-got-a-error-how-do-i-fix-it 
+
 ### NVM - Node Version Manager `brew install nvm`
 
 You should create NVM's working directory if it doesn't exist:
