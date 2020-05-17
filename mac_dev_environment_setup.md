@@ -135,6 +135,8 @@ After entering connection details for remote db (created via heroku) select 'Con
 
 ### signing into github using two factor auth via the cmd line
 
+Update: May 2020, just use ssh key
+
 Re-generate a personal access token called "macbook-home" here: https://github.com/settings/tokens
 
 Cache username and password in the command line `git config --global credential.helper osxkeychain`
