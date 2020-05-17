@@ -97,7 +97,11 @@ Set available RAM to 4GB
 ### [Google Drive](https://www.google.co.uk/drive/download/)
 
 ### httpie 
+
 `brew install httpie` - wrapper around cURL
+
+https://httpie.org/
+
 
 
 ### Installing postgres
