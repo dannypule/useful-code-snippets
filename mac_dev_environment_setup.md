@@ -1,4 +1,11 @@
-## List of Apps
+## List of Apps and Settings
+
+### Setting changes
+
+keyboard -> key repeat -> fastest setting
+keyboard -> Delay Until Repeat -> fastest setting
+dock -> smaller size
+settings -> keyboard -> shortcuts -> spotlight -> untick both options
 
 ### Chrome
 
