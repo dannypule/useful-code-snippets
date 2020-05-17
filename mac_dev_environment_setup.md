@@ -68,6 +68,10 @@ or last option would be:
 `nvm install 8.9.4` install specific version or `nvm install --lts`
 `nvm use 8.9.4` or `nvm use --lts`
 
+### Create ssh key
+https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/
+
+
 ### [Visual Studio Code](https://code.visualstudio.com/download)
 - setup user preferences
 - install extensions
@@ -90,7 +94,8 @@ Set available RAM to 4GB
 
 ### [Google Drive](https://www.google.co.uk/drive/download/)
 
-### httpie (brew install httpie) - wrapper around cURL
+### httpie 
+`brew install httpie` - wrapper around cURL
 
 
 ### Installing postgres
@@ -103,6 +108,7 @@ Start postgres with, `brew services start postgresql`
 Login into the postgres portal using `psql postgres`
 
 Uninstalling postgres (via homebrew): https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
+
 
 ### [Postgresql client](http://www.psequel.com/)
 
@@ -128,8 +134,5 @@ Re-generate a personal access token called "macbook-home" here: https://github.c
 Cache username and password in the command line `git config --global credential.helper osxkeychain`
 
 When entering username and password (e.g. while pushing), use the personal access token.
-
-
-
 
 ### Balsamiq
