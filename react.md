@@ -135,11 +135,11 @@ export { Greet } from './Greet';
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { Greet, Props } from './Greet';
+import { Greet } from './Greet';
 
 const getCatsRequest = jest.fn();
 
-const props: Props = {
+const props: React.ComponentProps<typeof Greet> = {
   getCatsRequest: getCatsRequest as any
 };
 
@@ -148,7 +148,7 @@ const qa = {
 }
 
 describe('Given a Greet component', () => {
-  let wrapper: ShallowWrapper;
+  let wrapper: ShallowWrapper<React.ComponentProps<typeof Greet>>;
 
   describe('When it is rendered', () => {
     beforeEach(() => {
