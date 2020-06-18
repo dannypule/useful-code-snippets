@@ -3,6 +3,7 @@
 ## Table of contents
 
 **[Functional Component](#Functional-Component)**<br>
+**[Functional Component - basic](#Functional-Component---basic)**<br>
 **[Class Component](#Class-Component)**<br>
 **[index](#index)**<br>
 **[Testing components - shallow](#Testing-components---shallow)**<br>
@@ -26,6 +27,46 @@
 ---
 
 ## Functional Component
+
+```tsx
+// Greet.tsx
+
+/** @jsx jsx */
+import React from 'react';
+import { jsx } from '@emotion/core';
+
+import { Margins } from 'src/design-system/style-types';
+
+import { style } from './Greet.style';
+
+interface RequiredProps {}
+
+interface DefaultProps {
+  marginBottom: Margins;
+  className: string;
+}
+
+export type Props = RequiredProps & DefaultProps;
+
+const defaultProps: DefaultProps = {
+  marginBottom: '0',
+  className: ''
+};
+
+export const Greet = (props: Props) => {
+  const { className } = props;
+
+  return <div className={className} css={style.container(props)}>yo</div>;
+};
+
+Greet.defaultProps = defaultProps;
+
+```
+
+---
+**[[Top](#React-Snippets)]**<br><br>
+
+## Functional Component - basic
 
 ```tsx
 // Greet.tsx
