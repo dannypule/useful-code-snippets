@@ -71,36 +71,13 @@ Greet.defaultProps = defaultProps;
 ```tsx
 // Greet.tsx
 
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
-
-import { Margins } from 'src/design-system/style-types';
-
-import { style } from './Greet.style';
 
 interface RequiredProps {}
 
-interface DefaultProps {
-  marginBottom: Margins;
-  className: string;
-}
-
-export type Props = RequiredProps & DefaultProps;
-
-const defaultProps: DefaultProps = {
-  marginBottom: '0',
-  className: ''
+export const Greet = (props: RequiredProps) => {
+  return <div>yo</div>;
 };
-
-export const Greet = (props: Props) => {
-  const { className } = props;
-
-  return <div className={className} css={style.container(props)}>yo</div>;
-};
-
-Greet.defaultProps = defaultProps;
-
 ```
 
 ---
