@@ -144,3 +144,7 @@ Cache username and password in the command line `git config --global credential.
 When entering username and password (e.g. while pushing), use the personal access token.
 
 ### Balsamiq
+
+### Customise touchbar
+
+https://medium.com/@svinkle/how-to-make-the-touch-bar-slightly-more-tolerable-857d29041f6a
