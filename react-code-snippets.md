@@ -4,6 +4,7 @@ React code snippets
 
 ```tsx
 const inputRef: RefObject<HTMLInputElement> = React.useRef(null);
+const [uploading, setUploading] = useState(false);
 
 const handleUploadClick = () => inputRef.current?.click();
 
