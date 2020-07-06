@@ -153,16 +153,16 @@ export { Greet } from './Greet';
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { Greet } from './Greet';
+import { Greet, mapDispatchToProps } from './Greet';
 
-const getCatsRequest = jest.fn();
+const actions = mockDispatchProps(mapDispatchToProps);
 
 const props: React.ComponentProps<typeof Greet> = {
-  getCatsRequest: getCatsRequest as any
+  ...actions,
 };
 
 const qa = {
-  uploadCatButton: '[data-qa="uploadCatButton"]' 
+  mainContent: '[data-qa="mainContent"]' 
 }
 
 describe('Given a Greet component', () => {
@@ -179,8 +179,8 @@ describe('Given a Greet component', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
     
-    it('Then qa.uploadCatButton should NOT exist', () => {
-      expect(wrapper.find(qa.uploadCatButton)).not.toExist();
+    it('Then the main content should be rendered', () => {
+      expect(qa.mainContent).toExist();
     });
   });
 });
@@ -203,20 +203,20 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import { TestApp } from 'src/utils/test-utils';
 
-import { Greet, Props } from './Greet';
+import { Greet, mapDispatchToProps } from './Greet';
 
-const getCatsRequest = jest.fn() as any;
+const actions = mockDispatchProps(mapDispatchToProps);
 
-const props: Props = {
-  getCatsRequest,
+const props: React.ComponentProps<typeof Greet> = {
+  ...actions,
 };
 
 const qa = {
-  uploadCatButton: '[data-qa="uploadCatButton"]' 
+  mainContent: '[data-qa="mainContent"]' 
 }
 
 describe('Given a Greet component', () => {
-  let wrapper: ReactWrapper;
+  let wrapper: ReactWrapper<React.ComponentProps<typeof Greet>>;
 
   describe('When it is rendered', () => {
     beforeEach(() => {
@@ -233,8 +233,8 @@ describe('Given a Greet component', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
     });
 
-    it('Then qa.uploadCatButton should NOT exist', () => {
-      expect(wrapper.find(qa.uploadCatButton)).not.toExist();
+    it('Then the main content should be rendered', () => {
+      expect(qa.mainContent).toExist();
     });
   });
 });
