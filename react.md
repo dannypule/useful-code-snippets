@@ -46,14 +46,12 @@ interface DefaultProps {
   className: string;
 }
 
-export type Props = RequiredProps & DefaultProps;
-
 const defaultProps: DefaultProps = {
   marginBottom: '0',
   className: ''
 };
 
-export const Greet = (props: Props) => {
+export const Greet = (props: RequiredProps & DefaultProps) => {
   const { className } = props;
 
   return <div className={className} css={style.container(props)}>yo</div>;
@@ -103,14 +101,12 @@ interface DefaultProps {
   className: string;
 }
 
-export type Props = RequiredProps & DefaultProps;
-
-
 interface State {
   showResults: boolean;
 }
 
-export class Greet extends React.Component<Props, State> {
+export class Greet extends React.Component<RequiredProps & DefaultProps;
+, State> {
   state = {
     showResults: false
   };
@@ -255,9 +251,9 @@ import { css } from '@emotion/core';
 
 import { Theme } from 'src/design-system/theme';
 
-import { Props } from './Greet';
+import { Greet } from './Greet';
 
-const container = (props: Props) => (theme: Theme) => css`
+const container = (props: React.ComponentProps<typeof Greet>) => (theme: Theme) => css`
   background-color: coral;
   margin-bottom: ${theme.margins[props.marginBottom]}px;
 `;
