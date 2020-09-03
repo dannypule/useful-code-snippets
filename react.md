@@ -69,7 +69,9 @@ Greet.defaultProps = defaultProps;
 ```tsx
 // Greet.tsx
 
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
 
 interface RequiredProps {}
 
