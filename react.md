@@ -174,7 +174,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then getCatsRequest should be called', () => {
-      expect(getCatsRequest).toHaveBeenCalledWith(42);
+      expect(actions.getCatsRequest).toHaveBeenCalledWith(42);
     });
     
     it('Then the Loading component should NOT be rendered', () => {
@@ -232,7 +232,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then getCatsRequest should be called', () => {
-      expect(getCatsRequest).toHaveBeenCalledWith(42);
+      expect(actions.getCatsRequest).toHaveBeenCalledWith(42);
     });
     
     it('Then the Loading component should NOT be rendered', () => {
