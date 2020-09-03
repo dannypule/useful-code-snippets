@@ -149,9 +149,9 @@ export { Greet } from './Greet';
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import { Greet, mapDispatchToProps } from './Greet';
+import { Greet, dispatchToProps } from './Greet';
 
-const actions = mockDispatchProps(mapDispatchToProps);
+const actions = mockDispatchProps(dispatchToProps);
 
 const props: React.ComponentProps<typeof Greet> = {
   ...actions,
@@ -199,9 +199,9 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import { TestApp } from 'src/utils/test-utils';
 
-import { Greet, mapDispatchToProps } from './Greet';
+import { Greet, dispatchToProps } from './Greet';
 
-const actions = mockDispatchProps(mapDispatchToProps);
+const actions = mockDispatchProps(dispatchToProps);
 
 const props: React.ComponentProps<typeof Greet> = {
   ...actions,
@@ -628,20 +628,18 @@ export { configureStore };
 ## redux connect
 
 ```tsx
-export const mapStateToProps = (state: AppState) => ({
+export const stateToProps = (state: AppState) => ({
   thing: selectors.selectThing(state),
 });
 
-export const mapDispatchToProps = {
+export const dispatchToProps = {
   getStuff: actions.getStuff.request,
 };
 
-export { MyComponent as UnwrappedMyComponent };
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MyComponent);
+export const MyComponent connect(
+  stateToProps,
+  dispatchToProps
+)(_MyComponent);
 ```
 
 ---
