@@ -176,7 +176,7 @@ describe('Given a Greet component', () => {
     });
     
     it('Then the main content should be rendered', () => {
-      expect(qa.mainContent).toExist();
+      expect(wrapper.find(qa.mainContent)).toExist();
     });
   });
 });
@@ -230,7 +230,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then the main content should be rendered', () => {
-      expect(qa.mainContent).toExist();
+      expect(wrapper.find(qa.mainContent)).toExist();
     });
   });
 });
