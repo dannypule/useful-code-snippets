@@ -149,6 +149,8 @@ export { Greet } from './Greet';
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
+import { mockDispatchProps, dataQa } from 'src/utils/test-utils';
+
 import { Greet, dispatchToProps } from './Greet';
 
 const actions = mockDispatchProps(dispatchToProps);
@@ -158,7 +160,7 @@ const props: React.ComponentProps<typeof Greet> = {
 };
 
 const qa = {
-  mainContent: '[data-qa="mainContent"]' 
+  mainContent: dataQa('mainContent') 
 }
 
 describe('Given a Greet component', () => {
@@ -173,6 +175,10 @@ describe('Given a Greet component', () => {
 
     it('Then getCatsRequest should be called', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
+    });
+    
+    it('Then the Loading component should NOT be rendered', () => {
+      expect(wrapper.find(Loading)).not.toExist();
     });
     
     it('Then the main content should be rendered', () => {
@@ -197,7 +203,7 @@ describe('Given a Greet component', () => {
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { TestApp } from 'src/utils/test-utils';
+import { TestApp, mockDispatchProps, dataQa } from 'src/utils/test-utils';
 
 import { Greet, dispatchToProps } from './Greet';
 
@@ -208,7 +214,7 @@ const props: React.ComponentProps<typeof Greet> = {
 };
 
 const qa = {
-  mainContent: '[data-qa="mainContent"]' 
+  mainContent: dataQa('mainContent') 
 }
 
 describe('Given a Greet component', () => {
@@ -227,6 +233,10 @@ describe('Given a Greet component', () => {
 
     it('Then getCatsRequest should be called', () => {
       expect(getCatsRequest).toHaveBeenCalledWith(42);
+    });
+    
+    it('Then the Loading component should NOT be rendered', () => {
+      expect(wrapper.find(Loading)).not.toExist();
     });
 
     it('Then the main content should be rendered', () => {
