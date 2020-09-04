@@ -176,6 +176,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then getCatsRequest should be called', () => {
+      expect(actions.getCatsRequest).toHaveBeenCalledTimes(1);
       expect(actions.getCatsRequest).toHaveBeenCalledWith(42);
     });
     
@@ -234,6 +235,7 @@ describe('Given a Greet component', () => {
     });
 
     it('Then getCatsRequest should be called', () => {
+      expect(actions.getCatsRequest).toHaveBeenCalledTimes(1);
       expect(actions.getCatsRequest).toHaveBeenCalledWith(42);
     });
     
