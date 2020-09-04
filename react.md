@@ -153,7 +153,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import { mockDispatchProps, dataQa } from 'src/utils/test-utils';
 
-import { Greet, dispatchToProps } from './Greet';
+import { _Greet as Greet, dispatchToProps } from './Greet';
 
 const actions = mockDispatchProps(dispatchToProps);
 
@@ -207,7 +207,7 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import { TestApp, mockDispatchProps, dataQa } from 'src/utils/test-utils';
 
-import { Greet, dispatchToProps } from './Greet';
+import { _Greet as Greet, dispatchToProps } from './Greet';
 
 const actions = mockDispatchProps(dispatchToProps);
 
