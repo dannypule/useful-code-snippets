@@ -70,8 +70,11 @@ or last option would be:
 `nvm install 8.9.4` install specific version or `nvm install --lts`
 `nvm use 8.9.4` or `nvm use --lts`
 
-### Create ssh key
+### Create SSH key
 https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/
+
+### Creating SSH keys for different git profiles (home, work etc)
+https://gist.github.com/Jonalogy/54091c98946cfe4f8cdab2bea79430f9
 
 
 ### [Visual Studio Code](https://code.visualstudio.com/download)
