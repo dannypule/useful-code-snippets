@@ -164,3 +164,9 @@ When entering username and password (e.g. while pushing), use the personal acces
 ### Customise touchbar
 
 https://medium.com/@svinkle/how-to-make-the-touch-bar-slightly-more-tolerable-857d29041f6a
+
+## Troubleshooting
+
+### FIX: battery draining too quickly (reset SMC)
+https://www.reddit.com/r/macbookpro/comments/efmy8w/fix_macbook_pro_16_terrible_battery_life/
+
