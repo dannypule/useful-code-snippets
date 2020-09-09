@@ -76,6 +76,17 @@ https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-opens
 ### Creating SSH keys for different git profiles (home, work etc)
 https://gist.github.com/Jonalogy/54091c98946cfe4f8cdab2bea79430f9
 
+then `nano ~/.gitconfig`
+
+and add
+
+```
+[url "git@gitlab.com-enhance:"]
+ insteadOf = https://gitlab.dev.enhance.com
+```
+
+`gitlab.com-enhance` is the name of the ssh host which points to a specific ssh key
+
 
 ### [Visual Studio Code](https://code.visualstudio.com/download)
 - setup user preferences
