@@ -165,8 +165,21 @@ When entering username and password (e.g. while pushing), use the personal acces
 
 https://medium.com/@svinkle/how-to-make-the-touch-bar-slightly-more-tolerable-857d29041f6a
 
+### Install Java JDK
+https://mkyong.com/java/how-to-install-java-on-mac-osx/
+
+```
+brew update
+brew tap adoptopenjdk/openjdk
+brew search jdk
+brew cask install adoptopenjdk15 # or higher version
+```
+
 ## Troubleshooting
 
 ### FIX: battery draining too quickly (reset SMC)
 https://www.reddit.com/r/macbookpro/comments/efmy8w/fix_macbook_pro_16_terrible_battery_life/
+
+
+
 
