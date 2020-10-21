@@ -173,6 +173,8 @@ brew update
 brew tap adoptopenjdk/openjdk
 brew search jdk
 brew cask install adoptopenjdk15 # or higher version
+/usr/libexec/java_home -V
+java -version
 ```
 
 ## Troubleshooting
