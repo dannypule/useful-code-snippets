@@ -81,11 +81,11 @@ then `nano ~/.gitconfig`
 and add
 
 ```
-[url "git@gitlab.com-enhance:"]
+[url "git@gitlab-enhance:"]
  insteadOf = https://gitlab.dev.enhance.com
 ```
 
-`gitlab.com-enhance` is the name of the ssh host which points to a specific ssh key 
+`gitlab-enhance` is the name of the ssh host which points to a specific ssh key 
 
 Reference https://medium.com/easyread/today-i-learned-fix-go-get-private-repository-return-error-terminal-prompts-disabled-8c5549d89045
 
