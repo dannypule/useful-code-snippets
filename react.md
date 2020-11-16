@@ -206,7 +206,6 @@ describe('Given a Greet component', () => {
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { loginMembershipMasterOrgMock } from 'src/mocks/loginMembershipMock';
 import { dataQaList, mockDispatchProps, TestApp } from 'src/utils/test-utils';
 
 import { _Greet as Greet, dispatchToProps } from './Greet';
@@ -215,7 +214,6 @@ const actions = mockDispatchProps(dispatchToProps);
 
 const props: React.ComponentProps<typeof Greet> = {
   ...actions,
-  member: loginMembershipMasterOrgMock,
 };
 
 const qa = dataQaList(['mainContent']);
