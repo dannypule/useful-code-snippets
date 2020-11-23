@@ -107,8 +107,7 @@ interface State {
   showResults: boolean;
 }
 
-export class Greet extends React.Component<RequiredProps & DefaultProps;
-, State> {
+export class Greet extends React.Component<RequiredProps & DefaultProps, State> {
   state = {
     showResults: false
   };
