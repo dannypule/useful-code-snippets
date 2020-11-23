@@ -273,7 +273,7 @@ export const style = { container };
 ```tsx
 // Greet.stories.tsx
 
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Greet } from './Greet';
