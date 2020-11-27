@@ -631,18 +631,15 @@ export { configureStore };
 ## redux connect
 
 ```tsx
-export const stateToProps = (state: AppState) => ({
-  thing: selectors.selectThing(state),
+const stateToProps = (state: AppState) => ({
+  cats: catsSelectors.catsState(state),
 });
 
-export const dispatchToProps = {
-  getStuff: actions.getStuff.request,
+const dispatchToProps = {
+  getCats: catsActions.getCats.request,
 };
 
-export const MyComponent connect(
-  stateToProps,
-  dispatchToProps
-)(_MyComponent);
+export const Component =  connect(stateToProps, dispatchToProps)(_Component);
 ```
 
 ---
