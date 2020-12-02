@@ -5,6 +5,7 @@
 **[Functional Component](#Functional-Component)**<br>
 **[Functional Component - basic](#Functional-Component---basic)**<br>
 **[Class Component](#Class-Component)**<br>
+**[Form Component](#Form-Component)**<br>
 **[index](#index)**<br>
 **[Testing components - shallow](#Testing-components---shallow)**<br>
 **[Testing components - mount](#Testing-components---mount)**<br>
@@ -126,9 +127,119 @@ export class Greet extends React.Component<RequiredProps & DefaultProps, State> 
 
 ```
 
+## Form Component
+
 ---
 **[[Top](#React-Snippets)]**<br><br>
 
+
+```tsx
+/** @jsx jsx */
+import React from 'react';
+import { jsx } from '@emotion/core';
+import { Formik, FormikHelpers } from 'formik';
+import { useHistory } from 'react-router';
+import * as yup from 'yup';
+
+import Box from 'src/components/Box/Box';
+import { Button } from 'src/components/Button/Button';
+import Card from 'src/components/Card/Card';
+import { InputField } from 'src/components/InputField/InputField';
+import { Heading } from 'src/components/Text/Heading';
+import { Span } from 'src/components/Text/Span';
+import { toastService } from 'src/utils/toastService';
+
+interface RequiredProps {}
+
+interface Fields {
+  subdomain: string;
+}
+
+const validationSchema = yup.object().shape({
+  subdomain: yup.string().required('A subdomain is required'),
+});
+
+export const Greet = (props: RequiredProps) => {
+  const history = useHistory();
+
+  const handleSubmit = async (values: Fields, actions: FormikHelpers<Fields>) => {
+    const { subdomain } = values;
+
+    console.log(subdomain, '<-- subdomain'); // eslint-disable-line
+
+    try {
+      toastService.success('Portal settings saved');
+    } catch {
+      toastService.error('An error occurred while saving the portal settings');
+      actions.setSubmitting(false);
+    }
+  };
+
+  return (
+    <div>
+      <Box>
+        <Box d="column" mb="lg">
+          <Heading marginBottom="sm">Configure portal settings</Heading>
+          <Span size="sm" color="grey">
+            Configure the settings for your company's booking portal (e.g. mybusiness.wheelieportal.com)
+          </Span>
+        </Box>
+      </Box>
+
+      <Card padding={{ xs: 'lg', md: '2xl' }}>
+        <Formik<Fields>
+          onSubmit={handleSubmit}
+          initialValues={{
+            subdomain: 'hi',
+          }}
+          validationSchema={validationSchema}
+        >
+          {(form) => {
+            return (
+              <form onSubmit={form.handleSubmit}>
+                <Box g="lg" mb="lg">
+                  <Box mb="lg">
+                    <Box w={{ xs: 1, sm: 1 / 2 }}>
+                      <InputField
+                        name="subdomain"
+                        placeholder="Subdomain"
+                        label="Subdomain"
+                        onChange={form.handleChange}
+                        value={form.values.subdomain}
+                        error={form.errors.subdomain}
+                        touched={form.touched.subdomain}
+                      />
+                    </Box>
+                  </Box>
+                </Box>
+
+                <Box j="flex-end">
+                  <Box mr="lg" w="auto">
+                    <Button onClick={() => history.push('/admin/dashboard/portal-settings')}>Cancel</Button>
+                  </Box>
+                  <Box w="auto">
+                    <Button
+                      loading={form.isSubmitting}
+                      type="primary"
+                      onClick={() => form.validateForm().then(() => form.submitForm())}
+                    >
+                      Save portal settings
+                    </Button>
+                  </Box>
+                </Box>
+              </form>
+            );
+          }}
+        </Formik>
+      </Card>
+    </div>
+  );
+};
+
+export default Greet;
+```
+
+**[[Top](#React-Snippets)]**<br><br> 
 
 ## index
 
