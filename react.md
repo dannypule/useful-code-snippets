@@ -647,18 +647,13 @@ export const thingsReducer = createReducer(initialState, handleAction => [
 ## Test reducer
 
 ```ts
-describe('Given someReducer', () => {
-  let state: State;
-
-  describe('When someActions.request action is received', () => {
-    it('Then the correct state should be returned', () => {
-      state = someReducer(state, someActions.request());
-
-      expect(state).toStrictEqual({
-        ...state,
-        loading: true
-      });
-    });
+describe('getCatsReducer', () => {
+  it('catsActions.getCats.request', () => {
+    const state = getCatsReducer(
+      initialCatsState,
+      catsActions.getCats.request({ companyId: '123' } })
+    );
+    expect(state).toStrictEqual(42);
   });
 });
 ```
