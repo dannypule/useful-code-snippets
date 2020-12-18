@@ -18,7 +18,6 @@
 **[API service - tests](#API-service---tests)**<br>
 **[Reducer](#Reducer)**<br>
 **[Reducer - tests](#Test-reducer)**<br>
-**[connect()](#connect)**<br>
 **[selectors](#selectors)**<br>
 **[createReducer](#createReducer)**<br>
 **[AppState type](#AppState-type)**<br>
@@ -656,32 +655,6 @@ describe('getCatsReducer', () => {
     expect(state).toStrictEqual(42);
   });
 });
-```
-
----
-**[[Top](#React-Snippets)]**<br><br>
-
-## connect()
-
-```ts
-import * as selectors from './redux/selectors'
-import * as actions from './redux/actions'
-
-export const stateToProps = (state: AppState) => ({
-  cats: selectors.selectCats(state)
-});
-
-export const dispatchToProps = {
-  getCatsRequest: actions.getCats.request,
-  addCatRequest: actions.addCat.request
-};
-
-export { Greet as UnwrappedGreet };
-
-export default connect(
-  stateToProps,
-  dispatchToProps
-)(Greet);
 ```
 
 ---
