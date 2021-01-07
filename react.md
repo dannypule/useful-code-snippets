@@ -522,6 +522,72 @@ describe('Given thingsSaga', () => {
 
 ```
 
+```ts
+import axios from 'axios';
+import { SagaType, TestApi, testSaga } from 'redux-saga-test-plan';
+
+import { thingsApi } from 'src/api_services/wordpress/service';
+import { thingsMock } from 'src/mocks/wordpress/plugins.mock';
+
+import { thingsActions } from './actions';
+import { getThingsRequestSaga } from './saga';
+
+jest.mock('axios');
+
+const appId = 'app-id-1';
+const orgId = 'orgId-1';
+const websiteId = 'websiteId-1';
+const meta = { appId };
+const onSuccess = jest.fn();
+const onError = jest.fn();
+const payload = {
+  params: { appId, orgId, websiteId },
+  onSuccess,
+  onError,
+};
+const thrownError = new Error('some error');
+const error = 'Error: some error';
+
+describe('Given getThingsRequestSaga', () => {
+  const response = {
+    data: {
+      items: thingsMock,
+    },
+    meta,
+  };
+
+  axios.get = jest.fn().mockResolvedValue(response);
+
+  let sagaTest: TestApi;
+
+  beforeEach(() => {
+    sagaTest = testSaga(
+      getThingsRequestSaga as SagaType,
+      thingsActions.getWordPressPluginsGrouped.request(payload)
+    );
+  });
+
+  it('dispatches "success" actions correctly', () => {
+    sagaTest
+      .next()
+      .call(thingsApi.getWordpressPlugins, payload.params)
+      .next(response)
+      .put(thingsActions.getWordPressPluginsGrouped.success(response))
+      .next()
+      .isDone();
+  });
+
+  it('dispatches "error" actions correctly', () => {
+    sagaTest
+      .next()
+      .throw(thrownError)
+      .put(thingsActions.getWordPressPluginsGrouped.error({ error, meta }))
+      .next()
+      .isDone();
+  });
+});
+```
+
 ---
 **[[Top](#React-Snippets)]**<br><br>
 
