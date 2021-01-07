@@ -563,16 +563,16 @@ describe('Given getThingsRequestSaga', () => {
   beforeEach(() => {
     sagaTest = testSaga(
       getThingsRequestSaga as SagaType,
-      thingsActions.getWordPressPluginsGrouped.request(payload)
+      thingsActions.getThingsGrouped.request(payload)
     );
   });
 
   it('dispatches "success" actions correctly', () => {
     sagaTest
       .next()
-      .call(thingsApi.getWordpressPlugins, payload.params)
+      .call(thingsApi.getThings, payload.params)
       .next(response)
-      .put(thingsActions.getWordPressPluginsGrouped.success(response))
+      .put(thingsActions.getThingsGrouped.success(response))
       .next()
       .isDone();
   });
@@ -581,7 +581,7 @@ describe('Given getThingsRequestSaga', () => {
     sagaTest
       .next()
       .throw(thrownError)
-      .put(thingsActions.getWordPressPluginsGrouped.error({ error, meta }))
+      .put(thingsActions.getThingsGrouped.error({ error, meta }))
       .next()
       .isDone();
   });
