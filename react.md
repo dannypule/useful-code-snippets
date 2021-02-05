@@ -471,8 +471,9 @@ describe('Given getThingsRequestSaga', () => {
     meta: REDUCER_META_MOCK,
     items: []
   };
+  const ERROR_RESPONSE = { response: { data: { code: 'errorCode' } } } as any;
   const ERORR_MSG = 'some error';
-  const ERROR = new Error(ERORR_MSG);
+  const ERROR = new Error(ERROR_RESPONSE);
   axios.get = jest.fn().mockResolvedValue(RESPONSE);
 
   let sagaTest: TestApi;
