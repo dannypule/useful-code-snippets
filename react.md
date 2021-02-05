@@ -423,7 +423,7 @@ export const getThings = {
 
 ```ts
 import { ActionType, getType } from 'deox';
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 
 import * as apiService from 'src/api_services/things/service';
 
@@ -439,7 +439,7 @@ export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.r
 }
 
 export function* thingsSaga() {
-  yield takeLatest(getType(getThings.request), getThingsRequestSaga);
+  yield takeEvery(getType(getThings.request), getThingsRequestSaga);
 }
 ```
 
