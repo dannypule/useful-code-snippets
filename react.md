@@ -429,12 +429,20 @@ import * as apiService from 'src/api_services/things/service';
 
 import { getThings } from './actions';
 
-export function* getThingsRequestSaga({ payload }: ActionType<typeof getThings.request>) {
+export function* getThingsSaga({ payload }: ActionType<typeof getThings.request>) {
+  const {
+    params: { userId },
+    onSuccess,
+    onError,
+  } = payload;
+
   try {
-    const res: apiService.GetAppCategoriesResponse = yield call(apiService.getThings, payload);
-    yield put(getThings.success(res));
+    const res: RestoreDeletedWebsiteRes = yield call(apiService.getThings, payload);
+    yield put(restoreDeletedWebsite.success({ data: res }));
+    onSuccess && onSuccess();
   } catch (error) {
-    yield put(getThings.error(error));
+    yield put(restoreDeletedWebsite.error(error));
+    onError && onError();
   }
 }
 
