@@ -162,7 +162,6 @@ When entering username and password (e.g. while pushing), use the personal acces
 ### Balsamiq
 
 ### Customise touchbar
-
 https://medium.com/@svinkle/how-to-make-the-touch-bar-slightly-more-tolerable-857d29041f6a
 
 ### Install Java JDK
@@ -176,6 +175,8 @@ brew cask install adoptopenjdk15 # or higher version
 /usr/libexec/java_home -V
 java -version
 ```
+### Add autocomplete to zsh
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
 ## Troubleshooting
 
