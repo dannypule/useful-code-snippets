@@ -778,7 +778,7 @@ const stateToProps = (state: AppState) => ({
   cats: catsSelectors.catsState(state),
 });
 
-const dispatchToProps = {
+export const dispatchToProps = {
   getCats: catsActions.getCats.request,
 };
 
