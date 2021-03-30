@@ -164,8 +164,6 @@ export const Greet = (props: RequiredProps) => {
   const handleSubmit = async (values: Fields, actions: FormikHelpers<Fields>) => {
     const { subdomain } = values;
 
-    console.log(subdomain, '<-- subdomain'); // eslint-disable-line
-
     try {
       toastService.success('Portal settings saved');
     } catch {
