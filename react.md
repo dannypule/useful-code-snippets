@@ -484,10 +484,10 @@ describe('Given getThingsRequestSaga', () => {
   const ERROR = new Error(ERROR_RESPONSE);
   axios.get = jest.fn().mockResolvedValue(RESPONSE);
 
-  let sagaTest: TestApi;
+  const sagaTest = testSaga(getThingsRequestSaga as SagaType, getThings.request(PAYLOAD));
 
   beforeEach(() => {
-    sagaTest = testSaga(getThingsRequestSaga as SagaType, getThings.request(PAYLOAD));
+    sagaTest.restart();
   });
 
   it('dispatches "success" actions correctly', () => {
@@ -497,6 +497,7 @@ describe('Given getThingsRequestSaga', () => {
       .next(RESPONSE)
       .put(getThings.success(RESPONSE))
       .next()
+      .finish()
       .isDone();
   });
 
@@ -506,6 +507,7 @@ describe('Given getThingsRequestSaga', () => {
       .throw(ERROR)
       .put(getThings.error(ERROR))
       .next()
+      .finish()
       .isDone();
   });
 });
@@ -556,13 +558,13 @@ describe('Given getThingsRequestSaga', () => {
 
   axios.get = jest.fn().mockResolvedValue(response);
 
-  let sagaTest: TestApi;
+  const sagaTest = testSaga(
+    getThingsRequestSaga as SagaType,
+    thingsActions.getThingsGrouped.request(payload)
+  );
 
   beforeEach(() => {
-    sagaTest = testSaga(
-      getThingsRequestSaga as SagaType,
-      thingsActions.getThingsGrouped.request(payload)
-    );
+    sagaTest.restart();
   });
 
   it('dispatches "success" actions correctly', () => {
@@ -572,6 +574,7 @@ describe('Given getThingsRequestSaga', () => {
       .next(response)
       .put(thingsActions.getThingsGrouped.success(response))
       .next()
+      .finish()
       .isDone();
   });
 
@@ -581,6 +584,7 @@ describe('Given getThingsRequestSaga', () => {
       .throw(thrownError)
       .put(thingsActions.getThingsGrouped.error({ error, meta }))
       .next()
+      .finish()
       .isDone();
   });
 });
