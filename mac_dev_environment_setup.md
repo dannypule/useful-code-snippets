@@ -9,6 +9,7 @@
 - keyboard -> press fn key to -> show f1, f2 etc keys
 - keyboard -> text (tab) -> uncheck top 4 boxes (correct spelling etc...)
 - dock -> smaller size
+- (when connected to second monitor) displays -> (uncheck) high dynamic range
 
 ### Chrome
 
