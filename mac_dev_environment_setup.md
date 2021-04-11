@@ -22,7 +22,7 @@ Number Switcher -> Tick "Left Command <number>"
   
 Number Switcher -> Tick "Show Numbers on Sidebar"
 
-### [Visual Studio Code](https://code.visualstudio.com/download)
+### [Visual Studio Code](https://code.visualstudio.com/insiders)
 - setup user preferences
 - install extensions
 - setup custom keybinding for re-do. `cmd + shift + P`, Search for 'Open Keyboard Shortcuts', Search for 'redo', edit it to `cmd + Y`
