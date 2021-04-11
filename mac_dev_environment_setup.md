@@ -45,6 +45,10 @@ Preferences -> Profiles -> Reuse previous sessions directory
 
 If a warning appears on zsh mount (Insecure completion-dependent directories detected), refer to this https://stackoverflow.com/questions/50499750/when-i-update-oh-my-zsh-i-got-a-error-how-do-i-fix-it 
 
+### Add zsh-autosuggestions plugin 
+
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+
 ### NVM - Node Version Manager 
 
 `brew install nvm`
