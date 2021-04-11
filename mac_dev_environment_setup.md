@@ -4,8 +4,9 @@
 
 - keyboard -> key repeat -> fastest setting
 - keyboard -> Delay Until Repeat -> fastest setting
+- keyboard -> shortcuts -> spotlight -> untick both options
+- keyboard -> touchbar shows -> expanded control strip
 - dock -> smaller size
-- settings -> keyboard -> shortcuts -> spotlight -> untick both options
 
 ### Chrome
 
