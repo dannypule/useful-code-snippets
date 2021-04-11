@@ -1,0 +1,97 @@
+{
+    "files.associations": {
+      "*.ejs": "html",
+      ".env.development": "shellscript"
+    },
+    "editor.codeLens": false,
+    "editor.minimap.enabled": true,
+    "files.exclude": {
+      "**/*.js": {
+        "when": "$(basename).ts"
+      },
+      "**/*.map": {
+        "when": "$(basename).map"
+      }
+    },
+    "editor.quickSuggestionsDelay": 0,
+    "editor.mouseWheelZoom": false,
+    "window.zoomLevel": 0,
+    "editor.suggestOnTriggerCharacters": false,
+    "extensions.ignoreRecommendations": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "workbench.startupEditor": "welcomePage",
+    "editor.tabSize": 2,
+    "editor.wordSeparators": "`~!@%^&*()=+[{]}\\|;:'\",.<>/?",
+    "workbench.editor.showTabs": false,
+    "javascript.validate.enable": false,
+    "editor.smoothScrolling": true,
+    "explorer.openEditors.visible": 25,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 80,
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true,
+      "suppressUpdateNotice": true,
+      "suppressWelcomeNotice": true
+    },
+    "explorer.confirmDelete": false,
+    "editor.matchBrackets": "always",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.validate": [
+      {
+        "language": "javascript"
+      },
+      {
+        "language": "javascriptreact"
+      },
+      {
+        "language": "typescript"
+      },
+      {
+        "language": "typescriptreact"
+      }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.codeLens.enabled": false,
+    "relativePath.ignore": [
+      "**/coverage/**",
+      "**/node_modules/**",
+      "**/build/**"
+    ],
+    "relativePath.excludedExtensions": [".js", ".jsx", ".ts", ".tsx"],
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false
+    },
+    "workbench.colorCustomizations": {
+      "editor.selectionBackground": "#3C8292"
+      // "editor.selectionHighlightBackground": "#3C8292"
+    },
+    "editor.occurrencesHighlight": false,
+    "editor.fontSize": 12.5,
+    "workbench.colorTheme": "Electron vue",
+    "coloredRegions.namedColors": {
+      "translations": "rgba(155, 89, 182, 0.1)"
+    },
+    "vs-kubernetes": {
+      "vscode-kubernetes.kubectl-path.mac": "/Users/dannypule/.vs-kubernetes/tools/kubectl/kubectl",
+      "vscode-kubernetes.minikube-path.mac": "/Users/dannypule/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+      "vscode-kubernetes.helm-path.mac": "/Users/dannypule/.vs-kubernetes/tools/helm/darwin-amd64/helm"
+    },
+    "tabnine.experimentalAutoImports": true
+  }
+  
