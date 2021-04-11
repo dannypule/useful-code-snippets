@@ -1,0 +1,104 @@
+{
+	"snippet___console.log": {
+	  "prefix": "csl",
+	  "body": ["console.log($1, '<-- $1'); // eslint-disable-line"],
+	  "description": "Snippet: Log output to console"
+	},
+	"snippet___debugger": {
+	  "prefix": "deb",
+	  "body": ["debugger; // eslint-disable-line"],
+	  "description": "Snippet: Debugger statement"
+	},
+	"snippet___eslint-disable-line": {
+	  "prefix": "edl",
+	  "body": ["// eslint-disable-line "],
+	  "description": "Snippet: eslint-disable-line"
+	},
+	"snippet___eslint-disable-next-line": {
+	  "prefix": "ednl",
+	  "body": ["// eslint-disable-next-line "],
+	  "description": "Snippet: eslint-disable-next-line"
+	},
+	"snippet___describe": {
+	  "prefix": "des",
+	  "body": ["describe('$1', () => {", "$2", "});"],
+	  "description": "Snippet: Jest describe block"
+	},
+	"snippet___it": {
+	  "prefix": "it",
+	  "body": ["it('$1', () => {", "$2", "});"],
+	  "description": "Snippet: Jest it block"
+	},
+	"snippet___expect": {
+	  "prefix": "exp",
+	  "body": ["expect($1).assertSomethingHere();"],
+	  "description": "Snippet: Jest expect block"
+	},
+	"snippet___wrapper.find": {
+	  "prefix": "wra",
+	  "body": ["expect(wrapper.find($1)).assertSomethingHere();"],
+	  "description": "Snippet: Jest wrapper.find()"
+	},
+	"snippet___beforeEach": {
+	  "prefix": "bef",
+	  "body": ["beforeEach(() => {", "$1", "});"],
+	  "description": "Snippet: Jest beforeEach block"
+	},
+	"snippet___afterEach": {
+	  "prefix": "aft",
+	  "body": ["afterEach(() => {", "$1", "});"],
+	  "description": "Snippet: Jest afterEach block"
+	},
+	"snippet___throw": {
+	  "prefix": "thr",
+	  "body": ["throw Error;"],
+	  "description": "Snippet: throw Error"
+	},
+	"snippet___given": {
+	  "prefix": "given",
+	  "body": [
+		"describe('Given ...', () => {",
+		"  beforeEach(() => {",
+		"    // content",
+		"  });",
+		"",
+		"  describe('When ...', () => {",
+		"    it('Then ...', () => {",
+		"      expect(true).toBe(true);",
+		"    });",
+		"  });",
+		"});"
+	  ],
+	  "description": "Given, When, Then block"
+	},
+	"snippet___RequiredProps": {
+	  "prefix": "Req",
+	  "body": [
+		"interface RequiredProps extends StateProps, ActionProps {",
+		"",
+		"}"
+	  ],
+	  "description": "Snippet: interface RequiredProps {}"
+	},
+	"snippet___DefaultProps": {
+	  "prefix": "Def",
+	  "body": ["interface DefaultProps {", "", "}"],
+	  "description": "Snippet: interface DefaultProps {}"
+	},
+	"snippet___ActionProps": {
+	  "prefix": "Act",
+	  "body": ["type ActionProps = typeof dispatchToProps;"],
+	  "description": "Snippet: interface ActionProps {}"
+	},
+	"snippet___interface": {
+	  "prefix": "int",
+	  "body": ["interface Foo {", "", "}"],
+	  "description": "Snippet: interface Foo {}"
+	},
+	"snippet___import": {
+	  "prefix": "imp",
+	  "body": ["import { } from '$1'"],
+	  "description": "Snippet: interface Foo {}"
+	}
+  }
+  
