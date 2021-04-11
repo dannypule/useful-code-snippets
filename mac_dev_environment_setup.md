@@ -34,7 +34,8 @@ Number Switcher -> Tick "Show Numbers on Sidebar"
 ### [Slack](https://slack.com/downloads/osx)
 
 ### [Alfred](https://www.alfredapp.com/)
-Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Alfred to cmd + space.
+- Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. 
+- Assign Alfred to cmd + space.
 
 ### [Spotify](https://www.spotify.com/uk/download/mac/)
 
