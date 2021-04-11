@@ -6,6 +6,7 @@
 - keyboard -> Delay Until Repeat -> fastest setting
 - keyboard -> shortcuts -> spotlight -> untick both options
 - keyboard -> touchbar shows -> expanded control strip
+- - keyboard -> press fn key to -> show f1, f2 etc keys
 - dock -> smaller size
 
 ### Chrome
@@ -40,6 +41,14 @@ Settings -> Keyboard -> Shortcuts -> Spotlight -> untick both options. Assign Al
 Preferences -> Profiles -> Reuse previous sessions directory
 
 ### [Homebrew](https://brew.sh/)
+
+### Homebrew cask
+
+```
+brew tap homebrew/cask-versions
+brew update
+brew tap caskroom/cask
+```
 
 ### [Oh My Zsh](http://ohmyz.sh/)
 
@@ -179,9 +188,7 @@ brew cask install adoptopenjdk15 # or higher version
 /usr/libexec/java_home -V
 java -version
 ```
-### Add autocomplete to zsh
-https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-
+ 
 ## Troubleshooting
 
 ### FIX: battery draining too quickly (reset SMC)
