@@ -6,7 +6,8 @@
 - keyboard -> Delay Until Repeat -> fastest setting
 - keyboard -> shortcuts -> spotlight -> untick both options
 - keyboard -> touchbar shows -> expanded control strip
-- - keyboard -> press fn key to -> show f1, f2 etc keys
+- keyboard -> press fn key to -> show f1, f2 etc keys
+- keyboard -> text (tab) -> uncheck top 4 boxes (correct spelling etc...)
 - dock -> smaller size
 
 ### Chrome
@@ -47,7 +48,7 @@ Preferences -> Profiles -> Reuse previous sessions directory
 ```
 brew tap homebrew/cask-versions
 brew update
-brew tap caskroom/cask
+brew tap homebrew/cask
 ```
 
 ### [Oh My Zsh](http://ohmyz.sh/)
@@ -133,34 +134,16 @@ https://httpie.org/
 
 
 
-### Installing postgres
-https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb#3-configuring-postgres
-
-Install with, `brew install postgresql`
-
-Start postgres with, `brew services start postgresql`
-
-Login into the postgres portal using `psql postgres`
-
-Uninstalling postgres (via homebrew): https://gist.github.com/Atlas7/b1a40a2ffd85728b33e7
-
-
-### [Postgresql client](http://www.psequel.com/)
-
-After entering connection details for remote db (created via heroku) select 'Connect via SSL' then click 'Connect'
-
-
 ### switch from apple git to updated git
 
-`git --version`
-
-`which git`
-
-`sudo mv /usr/bin/git /usr/bin/git-apple`
-
-`brew install git`
-
-`which git` (should now be /usr/local/bin/git)
+```
+git --version
+which git
+sudo mv /usr/bin/git /usr/bin/git-apple
+brew install git
+which git
+```
+Should now be /usr/local/bin/git
 
 ### signing into github using two factor auth via the cmd line
 
@@ -174,9 +157,6 @@ When entering username and password (e.g. while pushing), use the personal acces
 
 ### Balsamiq
 
-### Customise touchbar
-https://medium.com/@svinkle/how-to-make-the-touch-bar-slightly-more-tolerable-857d29041f6a
-
 ### Install Java JDK
 https://mkyong.com/java/how-to-install-java-on-mac-osx/
 
@@ -184,7 +164,7 @@ https://mkyong.com/java/how-to-install-java-on-mac-osx/
 brew update
 brew tap adoptopenjdk/openjdk
 brew search jdk
-brew cask install adoptopenjdk15 # or higher version
+brew install --cask adoptopenjdk15 #or higher version
 /usr/libexec/java_home -V
 java -version
 ```
