@@ -22,6 +22,11 @@ Number Switcher -> Tick "Left Command <number>"
   
 Number Switcher -> Tick "Show Numbers on Sidebar"
 
+### [Visual Studio Code](https://code.visualstudio.com/download)
+- setup user preferences
+- install extensions
+- setup custom keybinding for re-do. `cmd + shift + P`, Search for 'Open Keyboard Shortcuts', Search for 'redo', edit it to `cmd + Y`
+
 ### [Pathfinder mac](https://cocoatech.com/#/)
 
 ### [Slack](https://slack.com/downloads/osx)
@@ -89,12 +94,6 @@ and add
 `gitlab-enhance` is the name of the ssh host which points to a specific ssh key 
 
 Reference https://medium.com/easyread/today-i-learned-fix-go-get-private-repository-return-error-terminal-prompts-disabled-8c5549d89045
-
-
-### [Visual Studio Code](https://code.visualstudio.com/download)
-- setup user preferences
-- install extensions
-- setup custom keybinding for re-do. `cmd + shift + P`, Search for 'Open Keyboard Shortcuts', Search for 'redo', edit it to `cmd + Y`
 
 ### [Postman](https://www.getpostman.com/apps)
 
