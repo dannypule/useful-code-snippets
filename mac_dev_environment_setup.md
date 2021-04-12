@@ -41,7 +41,7 @@ Number Switcher -> Tick "Show Numbers on Sidebar"
 ### [Spotify](https://www.spotify.com/uk/download/mac/)
 
 ### [iTerm2](https://www.iterm2.com/) 
-Preferences -> Profiles -> Reuse previous sessions directory
+- Preferences -> Profiles -> Reuse previous sessions directory
 
 ### [Homebrew](https://brew.sh/)
 
