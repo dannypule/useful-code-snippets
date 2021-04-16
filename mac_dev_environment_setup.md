@@ -10,6 +10,8 @@
 - keyboard -> text (tab) -> uncheck top 4 boxes (correct spelling etc...)
 - dock -> smaller size
 - (when connected to second monitor) displays -> (uncheck) high dynamic range
+- mouse -> scrolling speed -> third fastest
+- mouse -> tracking speed -> third slowest (uses gaming mouse speed)
 
 ### Chrome
 
