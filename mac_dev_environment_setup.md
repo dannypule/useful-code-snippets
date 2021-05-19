@@ -116,6 +116,10 @@ Reference https://medium.com/easyread/today-i-learned-fix-go-get-private-reposit
 
 ### [Postman](https://www.getpostman.com/apps)
 
+  
+### Postico - for Postgres
+https://eggerapps.at/postico/
+  
 ### Azure Data Studio - for Postgres GUI 
 - Download from https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15#download-azure-data-studio
 -  Install the PostgreSQL extension 
