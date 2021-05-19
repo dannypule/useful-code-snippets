@@ -116,7 +116,16 @@ Reference https://medium.com/easyread/today-i-learned-fix-go-get-private-reposit
 
 ### [Postman](https://www.getpostman.com/apps)
 
-### Postgres (install instructions below)
+### Azure Data Studio - for Postgres GUI 
+- Download from https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15#download-azure-data-studio
+-  Install the PostgreSQL extension 
+  
+Name: PostgreSQL
+Id: microsoft.azuredatastudio-postgresql
+Description: PostgreSQL extension for Azure Data Studio
+Version: 0.2.7
+Publisher: Microsoft
+  
 
 ### PSequel (see installation steps below)
 
