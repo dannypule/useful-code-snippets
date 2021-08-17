@@ -32,6 +32,7 @@ Number Switcher -> Tick "Show Numbers on Sidebar"
 - install extensions
 - setup custom keybinding for re-do. `cmd + shift + P` -> Search for 'Open Keyboard Shortcuts' -> Search for 'redo' -> edit it to `cmd + Y`
 - setup custom keybinding for quick fix. `cmd + '` -> Search for 'Open Keyboard Shortcuts' -> Search for 'quick fix' -> edit both to be `cmd + '`
+- disable Inlay Hints
 
 ### [Pathfinder mac](https://cocoatech.com/#/)
 
