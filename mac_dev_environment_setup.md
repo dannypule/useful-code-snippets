@@ -30,7 +30,7 @@ Number Switcher -> Tick "Left Command <number>"
   
 Number Switcher -> Tick "Show Numbers on Sidebar"
 
-### [Visual Studio Code
+### Visual Studio Code
 https://code.visualstudio.com
   
   
