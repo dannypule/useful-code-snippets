@@ -28,6 +28,9 @@ Number Switcher -> Tick "Left Command <number>"
 Number Switcher -> Tick "Show Numbers on Sidebar"
 
 ### [Visual Studio Code](https://code.visualstudio.com/insiders)
+  
+Use "Settings Sync: Turn On" in VS Code or do the below:
+  
 - setup user preferences
 - install extensions
 - setup custom keybinding for re-do. `cmd + shift + P` -> Search for 'Open Keyboard Shortcuts' -> Search for 'redo' -> edit it to `cmd + Y`
