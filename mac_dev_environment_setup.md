@@ -14,10 +14,13 @@
 - mouse -> tracking speed -> third slowest (uses gaming mouse speed)
 
 ### Chrome
+https://www.google.co.uk/chrome
 
-### Chrome Canary
+### Brave
+https://try.bravesoftware.com/
 
 ### Contexts for mac: 
+https://contexts.co/
 
 Rules -> Select "Group windows manually"
 
@@ -27,7 +30,9 @@ Number Switcher -> Tick "Left Command <number>"
   
 Number Switcher -> Tick "Show Numbers on Sidebar"
 
-### [Visual Studio Code](https://code.visualstudio.com/insiders)
+### [Visual Studio Code
+https://code.visualstudio.com
+  
   
 Use "Settings Sync: Turn On" in VS Code or do the below:
   
