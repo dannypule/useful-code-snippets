@@ -75,29 +75,7 @@ https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zs
 
 ### NVM - Node Version Manager 
 
-`brew install nvm`
-
-You should create NVM's working directory if it doesn't exist:
-
-```
-mkdir ~/.nvm
-```
-Add the following to ~/.zshrc or your desired shell
-configuration file then restart it:
-
-```
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-or
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-```
-If you get a permissions error when installing nvm, fix permissions using:
-
-`sudo chown -R $(whoami) /usr/local/var/homebrew`
-
-or last option would be:
-`git clone http://github.com/creationix/nvm.git .nvm`
+https://github.com/nvm-sh/nvm
 
 ### Setup node and npm using nvm
 (first restart iTerm2 after installing nvm)
