@@ -19,6 +19,18 @@ https://www.google.co.uk/chrome
 ### Brave
 https://try.bravesoftware.com/
 
+### SteerMouse
+https://plentycom.jp/en/steermouse/download.php
+
+Settings file, search "steermouse" in gmail.
+
+Mac mouse tracking speed - 2 bar
+
+### SwitchResX
+https://www.madrau.com/srx_download/download.html
+
+Select external monitor -> Current Resolutions Tab -> 2304 x 1206, 60 Hz HiDPI, 16:9
+
 ### Contexts for mac: 
 https://contexts.co/
 
