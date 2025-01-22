@@ -85,7 +85,7 @@ If a warning appears on zsh mount (Insecure completion-dependent directories det
 
 https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
-### Install git
+### Git: Install git
 
 ```
 git --version
@@ -95,13 +95,17 @@ which git
 ```
 Should now be `/opt/homebrew/bin/git`
 
-### signing into github using ssh key
+### Github: Install github cli https://cli.github.com/
 
-Re-generate a personal access token called "macbook-home" here: https://github.com/settings/tokens
+### Github: personal access token
 
-Cache username and password in the command line `git config --global credential.helper osxkeychain`
+Generate a personal access token at https://github.com/settings/tokens
 
-When entering username and password (e.g. while pushing), use the personal access token.
+### Github: Log into git with gh (github cli)
+
+- Run: `gh auth login`
+- For question: "How would you like to authenticate GitHub CLI?", Select option: "Paste an authentication token"
+- Paste in the personal access token created above
 
 ### NVM - Node Version Manager 
 
