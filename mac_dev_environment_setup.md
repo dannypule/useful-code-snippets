@@ -85,6 +85,24 @@ If a warning appears on zsh mount (Insecure completion-dependent directories det
 
 https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
+### Install git
+
+```
+git --version
+which git
+brew install git
+which git
+```
+Should now be `/opt/homebrew/bin/git`
+
+### signing into github using ssh key
+
+Re-generate a personal access token called "macbook-home" here: https://github.com/settings/tokens
+
+Cache username and password in the command line `git config --global credential.helper osxkeychain`
+
+When entering username and password (e.g. while pushing), use the personal access token.
+
 ### NVM - Node Version Manager 
 
 https://github.com/nvm-sh/nvm
@@ -149,27 +167,6 @@ Set available RAM to 4GB
 https://httpie.org/
 
 
-
-### switch from apple git to updated git
-
-```
-git --version
-which git
-sudo mv /usr/bin/git /usr/bin/git-apple
-brew install git
-which git
-```
-Should now be /usr/local/bin/git
-
-### signing into github using two factor auth via the cmd line
-
-Update: May 2020, just use ssh key
-
-Re-generate a personal access token called "macbook-home" here: https://github.com/settings/tokens
-
-Cache username and password in the command line `git config --global credential.helper osxkeychain`
-
-When entering username and password (e.g. while pushing), use the personal access token.
 
 ### Balsamiq
 
